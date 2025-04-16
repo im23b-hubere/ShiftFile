@@ -5,7 +5,6 @@ import uuid
 import logging
 import sys
 import mimetypes
-from pydub import AudioSegment
 import tempfile
 from werkzeug.utils import secure_filename
 import traceback
@@ -15,26 +14,23 @@ import cloudconvert
 # Load environment variables
 load_dotenv()
 
-# Set FFmpeg path for local development
-if os.getenv('ENVIRONMENT') == 'development':
-    AudioSegment.converter = r"C:\ProgramData\chocolatey\bin\ffmpeg.exe"
-
 # Configure CloudConvert
 if os.getenv('CLOUDCONVERT_API_KEY'):
     cloudconvert.configure(api_key=os.getenv('CLOUDCONVERT_API_KEY'))
 
 # Verzeichnisse konfigurieren
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FRONTEND_DIR = os.path.join(BASE_DIR, 'frontend')
-TEMP_DIR = os.path.join(BASE_DIR, 'temp')
-UPLOAD_DIR = os.path.join(BASE_DIR, 'uploads')
-CONVERTED_DIR = os.path.join(BASE_DIR, 'converted')
+if os.getenv('VERCEL_ENV'):
+    # Auf Vercel nutzen wir /tmp für temporäre Dateien
+    BASE_DIR = '/tmp'
+    TEMP_DIR = '/tmp'
+else:
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    TEMP_DIR = os.path.join(BASE_DIR, 'temp')
 
-# Verzeichnisse erstellen
-for directory in [TEMP_DIR, UPLOAD_DIR, CONVERTED_DIR]:
-    os.makedirs(directory, exist_ok=True)
+# Verzeichnis erstellen
+os.makedirs(TEMP_DIR, exist_ok=True)
 
-app = Flask(__name__, static_folder=FRONTEND_DIR, static_url_path='')
+app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max-limit
 
 # Logging-Konfiguration
@@ -59,19 +55,6 @@ FORMAT_MAPPING = {
     'bmp': 'BMP',
     'ico': 'ICO'
 }
-
-@app.route('/')
-def index():
-    """Serve the frontend"""
-    return send_from_directory(FRONTEND_DIR, 'index.html')
-
-@app.route('/<path:path>')
-def serve_static(path):
-    """Serve static files"""
-    try:
-        return send_from_directory(FRONTEND_DIR, path)
-    except:
-        return send_from_directory(FRONTEND_DIR, 'index.html')
 
 @app.route('/formats')
 def get_formats():
@@ -128,82 +111,48 @@ def convert_file():
                     logging.info(f"Bild erfolgreich konvertiert: {temp_output}")
             
             elif is_audio_file(file.filename):
-                if os.getenv('ENVIRONMENT') == 'development':
-                    # Local audio processing
-                    audio = AudioSegment.from_file(temp_input)
-                    
-                    # Process audio parameters
-                    volume_db = float(request.form.get('volume', 0))
-                    speed = float(request.form.get('speed', 1.0))
-                    fade_in = int(request.form.get('fadeIn', 0))
-                    fade_out = int(request.form.get('fadeOut', 0))
-                    normalize = request.form.get('normalize', 'false').lower() == 'true'
-                    mono = request.form.get('mono', 'false').lower() == 'true'
-                    
-                    if volume_db != 0:
-                        audio = audio.apply_gain(volume_db)
-                    
-                    if speed != 1.0:
-                        audio = audio._spawn(audio.raw_data, overrides={
-                            "frame_rate": int(audio.frame_rate * speed)
-                        })
-                    
-                    if fade_in > 0:
-                        audio = audio.fade_in(fade_in * 1000)
-                    
-                    if fade_out > 0:
-                        audio = audio.fade_out(fade_out * 1000)
-                    
-                    if normalize:
-                        audio = audio.normalize()
-                    
-                    if mono:
-                        audio = audio.set_channels(1)
-                    
-                    # Export with format-specific settings
-                    export_params = {}
-                    if target_format == 'mp3':
-                        bitrate = request.form.get('bitrate', '192k')
-                        export_params['bitrate'] = bitrate
-                    
-                    audio.export(temp_output, format=target_format, **export_params)
-                else:
-                    # Cloud audio processing
-                    try:
-                        job = cloudconvert.Job.create({
-                            'tasks': {
-                                'import-file': {
-                                    'operation': 'import/upload'
-                                },
-                                'convert-file': {
-                                    'operation': 'convert',
-                                    'input': ['import-file'],
-                                    'output_format': target_format,
-                                    'audio_codec': target_format,
-                                    'audio_bitrate': request.form.get('bitrate', '192'),
-                                    'audio_normalize': request.form.get('normalize', 'false').lower() == 'true',
-                                    'audio_channels': 1 if request.form.get('mono', 'false').lower() == 'true' else 2
-                                },
-                                'export-file': {
-                                    'operation': 'export/url',
-                                    'input': ['convert-file']
-                                }
+                # Audio processing using CloudConvert
+                try:
+                    job = cloudconvert.Job.create({
+                        'tasks': {
+                            'import-file': {
+                                'operation': 'import/upload'
+                            },
+                            'convert-file': {
+                                'operation': 'convert',
+                                'input': ['import-file'],
+                                'output_format': target_format,
+                                'audio_codec': target_format,
+                                'audio_bitrate': request.form.get('bitrate', '192'),
+                                'audio_normalize': request.form.get('normalize', 'false').lower() == 'true',
+                                'audio_channels': 1 if request.form.get('mono', 'false').lower() == 'true' else 2,
+                                'audio_frequency': request.form.get('frequency', '44100'),
+                                'volume': float(request.form.get('volume', 0)),
+                                'trim_start': float(request.form.get('fadeIn', 0)),
+                                'trim_end': float(request.form.get('fadeOut', 0))
+                            },
+                            'export-file': {
+                                'operation': 'export/url',
+                                'input': ['convert-file']
                             }
-                        })
+                        }
+                    })
 
-                        upload_task = job['tasks']['import-file']
-                        with open(temp_input, 'rb') as file:
-                            cloudconvert.Task.upload(file=file, task=upload_task)
-                        
-                        job = cloudconvert.Job.wait(id=job['id'])
-                        export_task = job['tasks']['export-file']
-                        
-                        # Download the converted file
-                        cloudconvert.download(filename=temp_output, url=export_task['result']['files'][0]['url'])
-                        
-                    except Exception as e:
-                        logging.error(f"Cloud conversion error: {str(e)}")
-                        raise
+                    # Upload the file
+                    upload_task = job['tasks']['import-file']
+                    with open(temp_input, 'rb') as file:
+                        cloudconvert.Task.upload(file=file, task=upload_task)
+                    
+                    # Wait for the job to complete
+                    job = cloudconvert.Job.wait(id=job['id'])
+                    export_task = job['tasks']['export-file']
+                    
+                    # Download the converted file
+                    cloudconvert.download(filename=temp_output, url=export_task['result']['files'][0]['url'])
+                    
+                except Exception as e:
+                    logging.error(f"Cloud conversion error: {str(e)}")
+                    return jsonify({'error': f'Fehler bei der Cloud-Konvertierung: {str(e)}'}), 500
 
             # Send the converted file
             return send_file(

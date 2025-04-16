@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
         previewImage: document.getElementById('previewImage'),
         fileName: document.getElementById('fileName'),
         fileSize: document.getElementById('fileSize'),
-        fileFormat: document.getElementById('fileFormat')
+        fileFormat: document.getElementById('fileFormat'),
+        format: document.getElementById('format')
     };
 
     let currentFileType = 'image';
@@ -93,40 +94,40 @@ document.addEventListener('DOMContentLoaded', () => {
         audioControls.className = 'audio-controls';
         audioControls.innerHTML = `
             <div class="control-group">
-                <label>Lautstärke (dB): <span id="volumeValue">0</span></label>
+                <label for="volume">Lautstärke (dB): <span id="volumeValue">0</span></label>
                 <input type="range" id="volume" min="-20" max="20" value="0" step="1">
             </div>
             <div class="control-group">
-                <label>Geschwindigkeit: <span id="speedValue">1.0</span>x</label>
+                <label for="speed">Geschwindigkeit: <span id="speedValue">1.0</span>x</label>
                 <input type="range" id="speed" min="0.5" max="2" value="1.0" step="0.1">
             </div>
             <div class="control-group">
-                <label>Fade-In (Sekunden):</label>
-                <input type="number" id="fadeIn" min="0" max="10" value="0" step="0.1">
+                <label for="fadeIn">Fade-In (Sekunden)</label>
+                <input type="number" id="fadeIn" min="0" max="10" value="0" step="1">
             </div>
             <div class="control-group">
-                <label>Fade-Out (Sekunden):</label>
-                <input type="number" id="fadeOut" min="0" max="10" value="0" step="0.1">
+                <label for="fadeOut">Fade-Out (Sekunden)</label>
+                <input type="number" id="fadeOut" min="0" max="10" value="0" step="1">
             </div>
             <div class="control-group">
                 <label>
                     <input type="checkbox" id="normalize">
-                    Lautstärke normalisieren
+                    Normalisieren
                 </label>
             </div>
             <div class="control-group">
                 <label>
                     <input type="checkbox" id="mono">
-                    Zu Mono konvertieren
+                    Mono
                 </label>
             </div>
-            <div class="control-group mp3-only" style="display: none;">
-                <label>MP3 Bitrate:</label>
+            <div class="control-group" id="bitrateContainer" style="display: none;">
+                <label for="bitrate">MP3 Bitrate</label>
                 <select id="bitrate">
-                    <option value="128k">128 kbps</option>
-                    <option value="192k" selected>192 kbps</option>
-                    <option value="256k">256 kbps</option>
-                    <option value="320k">320 kbps</option>
+                    <option value="128">128 kbps</option>
+                    <option value="192" selected>192 kbps</option>
+                    <option value="256">256 kbps</option>
+                    <option value="320">320 kbps</option>
                 </select>
             </div>
         `;
@@ -316,66 +317,56 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(style);
 
     async function processAudio() {
-        const fileInput = document.querySelector('input[type="file"]');
-        if (!fileInput.files.length) {
-            alert('Bitte wählen Sie eine Datei aus');
-            return;
-        }
-
-        const file = fileInput.files[0];
-        if (!file.type.startsWith('audio/')) {
-            alert('Bitte wählen Sie eine gültige Audiodatei aus');
+        const fileInput = document.getElementById('fileInput');
+        const formatSelect = document.getElementById('format');
+        
+        if (!fileInput.files[0]) {
+            alert('Bitte wählen Sie eine Datei aus.');
             return;
         }
 
         const formData = new FormData();
-        formData.append('file', file);
+        formData.append('file', fileInput.files[0]);
+        formData.append('format', formatSelect.value);
 
-        const audioParams = {
-            volume: document.getElementById('volume')?.value || '0',
-            speed: document.getElementById('speed')?.value || '1.0',
-            fadeIn: document.getElementById('fadeIn')?.value || '0',
-            fadeOut: document.getElementById('fadeOut')?.value || '0',
-            normalize: document.getElementById('normalize')?.checked || false,
-            mono: document.getElementById('mono')?.checked || false,
-            format: document.getElementById('convertToAudio')?.value || 'mp3',
-            bitrate: document.getElementById('bitrate')?.value || '192k'
-        };
-
-        Object.entries(audioParams).forEach(([key, value]) => {
-            formData.append(key, value);
-        });
+        // Audio-spezifische Parameter
+        if (document.getElementById('audioControls')) {
+            formData.append('volume', document.getElementById('volume').value);
+            formData.append('speed', document.getElementById('speed').value);
+            formData.append('fadeIn', document.getElementById('fadeIn').value);
+            formData.append('fadeOut', document.getElementById('fadeOut').value);
+            formData.append('normalize', document.getElementById('normalize').checked);
+            formData.append('mono', document.getElementById('mono').checked);
+            
+            if (formatSelect.value === 'mp3') {
+                formData.append('bitrate', document.getElementById('bitrate').value);
+            }
+        }
 
         try {
-            elements.progress.hidden = false;
-            elements.progressBar.style.width = '50%';
-            
-            const response = await fetch('/api/process-audio', {
+            const response = await fetch('/convert', {
                 method: 'POST',
                 body: formData
             });
 
             if (!response.ok) {
                 const errorData = await response.json();
-                throw new Error(errorData.error || 'Fehler bei der Audio-Verarbeitung');
+                throw new Error(errorData.error || 'Konvertierung fehlgeschlagen');
             }
 
             const blob = await response.blob();
             const url = URL.createObjectURL(blob);
-            
-            elements.downloadLink.href = url;
-            elements.downloadLink.download = `processed_${file.name}`;
-            elements.progressBar.style.width = '100%';
-            elements.result.hidden = false;
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `converted_${fileInput.files[0].name}`;
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
 
         } catch (error) {
-            alert(`Fehler: ${error.message}`);
-            console.error('Audio-Verarbeitungsfehler:', error);
-        } finally {
-            setTimeout(() => {
-                elements.progress.hidden = true;
-                elements.progressBar.style.width = '0%';
-            }, 1000);
+            alert('Fehler bei der Konvertierung: ' + error.message);
+            console.error('Error:', error);
         }
     }
 
@@ -392,4 +383,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     createAudioControls();
     addProcessButton();
+
+    // Hole unterstützte Formate vom Server
+    fetch('/formats')
+        .then(response => response.json())
+        .then(data => {
+            // Event-Listener für Dateiauswahl
+            elements.fileInput.addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const extension = file.name.split('.').pop().toLowerCase();
+                    
+                    // Setze die verfügbaren Zielformate basierend auf dem Dateityp
+                    elements.format.innerHTML = '';
+                    if (data.image.includes(extension)) {
+                        currentFileType = 'image';
+                        data.image.forEach(format => {
+                            const option = document.createElement('option');
+                            option.value = format;
+                            option.textContent = format.toUpperCase();
+                            elements.format.appendChild(option);
+                        });
+                    } else if (data.audio.includes(extension)) {
+                        currentFileType = 'audio';
+                        data.audio.forEach(format => {
+                            const option = document.createElement('option');
+                            option.value = format;
+                            option.textContent = format.toUpperCase();
+                            elements.format.appendChild(option);
+                        });
+                        createAudioControls();
+                    }
+                }
+            });
+
+            // Event-Listener für Format-Änderung
+            elements.format.addEventListener('change', function() {
+                const bitrateContainer = document.getElementById('bitrateContainer');
+                if (bitrateContainer) {
+                    bitrateContainer.style.display = this.value === 'mp3' ? 'block' : 'none';
+                }
+            });
+        })
+        .catch(error => console.error('Error:', error));
 }); 

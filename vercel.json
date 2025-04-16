@@ -12,12 +12,19 @@
     ],
     "routes": [
         {
-            "src": "/api/(.*)",
+            "src": "/convert",
             "dest": "backend/app.py"
         },
         {
-            "src": "/(.*)",
+            "src": "/formats",
             "dest": "backend/app.py"
+        },
+        {
+            "handle": "filesystem"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/frontend/$1"
         }
     ],
     "installCommand": "pip install -r requirements.txt",
