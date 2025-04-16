@@ -700,3 +700,41 @@
 2025-04-16 14:15:19,619 - INFO - 127.0.0.1 - - [16/Apr/2025 14:15:19] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
 2025-04-16 14:17:42,343 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
 2025-04-16 14:17:42,399 - INFO -  * Restarting with stat
+2025-04-16 14:17:42,844 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 14:17:42,845 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 14:17:42,845 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 14:17:42,885 - INFO - Server gestartet
+2025-04-16 14:17:42,896 - WARNING -  * Debugger is active!
+2025-04-16 14:17:42,900 - INFO -  * Debugger PIN: 144-333-576
+2025-04-16 14:18:00,497 - INFO - 127.0.0.1 - - [16/Apr/2025 14:18:00] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 14:18:00,544 - INFO - 127.0.0.1 - - [16/Apr/2025 14:18:00] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 14:18:00,547 - INFO - 127.0.0.1 - - [16/Apr/2025 14:18:00] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 14:19:01,135 - INFO - 127.0.0.1 - - [16/Apr/2025 14:19:01] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 14:19:01,181 - INFO - 127.0.0.1 - - [16/Apr/2025 14:19:01] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 14:19:01,183 - INFO - 127.0.0.1 - - [16/Apr/2025 14:19:01] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 14:19:33,243 - INFO - 127.0.0.1 - - [16/Apr/2025 14:19:33] "POST /convert HTTP/1.1" 200 -
+2025-04-16 14:19:59,914 - INFO - 127.0.0.1 - - [16/Apr/2025 14:19:59] "[33mGET /datenschutz HTTP/1.1[0m" 404 -
+2025-04-16 14:20:03,865 - INFO - 127.0.0.1 - - [16/Apr/2025 14:20:03] "[33mGET /impressum HTTP/1.1[0m" 404 -
+2025-04-16 14:20:34,123 - INFO - 127.0.0.1 - - [16/Apr/2025 14:20:34] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 14:20:34,162 - INFO - 127.0.0.1 - - [16/Apr/2025 14:20:34] "GET /style.css HTTP/1.1" 200 -
+2025-04-16 14:20:34,163 - INFO - 127.0.0.1 - - [16/Apr/2025 14:20:34] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 14:20:44,409 - INFO - 127.0.0.1 - - [16/Apr/2025 14:20:44] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 14:20:44,446 - INFO - 127.0.0.1 - - [16/Apr/2025 14:20:44] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 14:20:44,447 - INFO - 127.0.0.1 - - [16/Apr/2025 14:20:44] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 14:22:10,091 - INFO - 127.0.0.1 - - [16/Apr/2025 14:22:10] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 14:22:10,156 - INFO - 127.0.0.1 - - [16/Apr/2025 14:22:10] "GET /style.css HTTP/1.1" 200 -
+2025-04-16 14:22:10,156 - INFO - 127.0.0.1 - - [16/Apr/2025 14:22:10] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 15:05:36,126 - INFO - 127.0.0.1 - - [16/Apr/2025 15:05:36] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 15:05:36,156 - INFO - 127.0.0.1 - - [16/Apr/2025 15:05:36] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 15:05:36,157 - INFO - 127.0.0.1 - - [16/Apr/2025 15:05:36] "GET /script.js HTTP/1.1" 200 -
+2025-04-16 15:09:01,398 - INFO - 127.0.0.1 - - [16/Apr/2025 15:09:01] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 15:09:01,445 - INFO - 127.0.0.1 - - [16/Apr/2025 15:09:01] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 15:09:01,451 - INFO - 127.0.0.1 - - [16/Apr/2025 15:09:01] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 15:33:47,159 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 15:33:47,162 - INFO - Alte Datei gelöscht: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_007030a3-4633-40e5-a52f-e39a913a497a.mp3
+2025-04-16 15:33:47,164 - INFO - Alte Datei gelöscht: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_2ab92c0a-4066-4a69-b147-8f71199c2fe3.png
+2025-04-16 15:33:47,165 - INFO - Alte Datei gelöscht: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_3ef64fab-42c3-451b-a742-eef635c5ff6f.wav
+2025-04-16 15:33:47,166 - INFO - Alte Datei gelöscht: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_4d26248d-3a1c-446d-b9d8-643d40d4d2b5.tiff
+2025-04-16 15:33:47,167 - INFO - Alte Datei gelöscht: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_6d668eab-53bb-4bb7-9d49-f10f5b3b99b8.webp
+2025-04-16 15:33:47,168 - INFO - Alte Datei gelöscht: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_abb2faf1-f3c6-40dd-a66d-770c2af967d5.mp3
+2025-04-16 15:33:47,203 - INFO -  * Restarting with stat
