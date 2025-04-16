@@ -3,27 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShiftFile - Dateikonverter</title>
+    <meta name="description" content="Kostenloser Online-Dateikonverter für Bilder und Audio. Konvertieren Sie JPG, PNG, WEBP, GIF, MP3, WAV und mehr. Einfach zu bedienen, keine Installation erforderlich.">
+    <meta name="keywords" content="Dateikonverter, Bildkonverter, Audiokonverter, Online-Konverter, JPG, PNG, WEBP, GIF, MP3, WAV, kostenlos">
+    <meta name="author" content="ShiftFile">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="ShiftFile - Kostenloser Online-Dateikonverter">
+    <meta property="og:description" content="Konvertieren Sie Bilder und Audiodateien kostenlos online. Unterstützt JPG, PNG, WEBP, GIF, MP3, WAV und mehr.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shiftfile.vercel.app">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <title>ShiftFile - Kostenloser Online-Dateikonverter für Bilder und Audio</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Structured Data für Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "ShiftFile",
+        "description": "Kostenloser Online-Dateikonverter für Bilder und Audiodateien",
+        "url": "https://shiftfile.vercel.app",
+        "applicationCategory": "Multimedia",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
 </head>
 <body>
     <div class="container">
-        <h1>ShiftFile</h1>
+        <h1>ShiftFile - Dateikonverter</h1>
+        
         <div class="format-selector">
-            <button class="format-btn active" data-type="image">Bilder</button>
-            <button class="format-btn" data-type="audio">Audio</button>
+            <button class="format-btn active" data-type="image">Bild konvertieren</button>
+            <button class="format-btn" data-type="audio">Audio konvertieren</button>
         </div>
-        <div class="upload-container" id="dropZone">
+
+        <div id="dropZone" class="upload-container">
             <div class="upload-content">
-                <img src="upload-icon.svg" alt="Upload" id="uploadIcon">
+                <svg id="uploadIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+                </svg>
                 <p>Dateien hierher ziehen oder klicken zum Auswählen</p>
-                <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.webp,.gif,.tiff,.mp3,.wav" hidden>
             </div>
         </div>
+        <input type="file" id="fileInput" hidden>
+
+        <select id="convertTo" class="format-select">
+            <option value="jpg">JPG</option>
+            <option value="png">PNG</option>
+            <option value="webp">WEBP</option>
+            <option value="gif">GIF</option>
+            <option value="tiff">TIFF</option>
+            <option value="bmp">BMP</option>
+            <option value="ico">ICO</option>
+        </select>
+
+        <select id="convertToAudio" class="format-select" hidden>
+            <option value="mp3">MP3</option>
+            <option value="wav">WAV</option>
+            <option value="ogg">OGG</option>
+            <option value="flac">FLAC</option>
+            <option value="m4a">M4A</option>
+            <option value="aac">AAC</option>
+        </select>
+
         <div id="preview" class="preview-container" hidden>
             <h3>Vorschau</h3>
             <div class="image-info">
-                <img id="previewImage" alt="Bildvorschau">
+                <img id="previewImage" alt="Vorschau">
                 <div class="info-text">
                     <p>Dateiname: <span id="fileName"></span></p>
                     <p>Größe: <span id="fileSize"></span></p>
@@ -31,28 +86,29 @@
                 </div>
             </div>
         </div>
-        <div class="controls">
-            <select id="convertTo" class="image-formats">
-                <option value="png">Zu PNG konvertieren</option>
-                <option value="jpg">Zu JPG konvertieren</option>
-                <option value="webp">Zu WebP konvertieren</option>
-                <option value="gif">Zu GIF konvertieren</option>
-                <option value="tiff">Zu TIFF konvertieren</option>
-            </select>
-            <select id="convertToAudio" class="audio-formats" hidden>
-                <option value="mp3">Zu MP3 konvertieren</option>
-                <option value="wav">Zu WAV konvertieren</option>
-            </select>
-            <button id="convertBtn" disabled>Konvertieren</button>
+
+        <button id="convertBtn" disabled>Konvertieren</button>
+
+        <div id="progress" hidden>
+            <div class="progress">
+                <div class="progress-bar"></div>
+            </div>
         </div>
-        <div id="progress" class="progress" hidden>
-            <div class="progress-bar"></div>
-        </div>
+
         <div id="result" hidden>
-            <h3>Konvertierung abgeschlossen!</h3>
-            <a id="downloadLink" class="download-btn" download>Datei herunterladen</a>
+            <h3>Konvertierung erfolgreich!</h3>
+            <a id="downloadLink" class="download-btn" download>Konvertierte Datei herunterladen</a>
         </div>
     </div>
+
+    <footer>
+        <p>© 2024 ShiftFile - Kostenloser Online-Dateikonverter</p>
+        <nav>
+            <a href="/datenschutz">Datenschutz</a>
+            <a href="/impressum">Impressum</a>
+        </nav>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html> 

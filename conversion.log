@@ -291,3 +291,412 @@
 2025-04-16 12:32:35,630 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_16c37ff2-6e86-49c7-820a-914a932f2db1.mp3
 2025-04-16 12:32:35,631 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_30748392-495f-4935-876d-e79b08c3c4e9.wav
 2025-04-16 12:32:35,631 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_d160ed87-499f-42d4-8af6-9570b21899d4.png
+2025-04-16 12:32:35,688 - INFO -  * Restarting with stat
+2025-04-16 12:32:36,248 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 12:32:36,249 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 12:32:36,250 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 12:32:36,252 - INFO - Server gestartet
+2025-04-16 12:32:36,277 - WARNING -  * Debugger is active!
+2025-04-16 12:32:36,282 - INFO -  * Debugger PIN: 407-289-421
+2025-04-16 12:34:54,524 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 12:34:54,587 - INFO -  * Restarting with stat
+2025-04-16 12:34:55,074 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 12:34:55,075 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 12:34:55,076 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 12:34:55,078 - INFO - Server gestartet
+2025-04-16 12:34:55,104 - WARNING -  * Debugger is active!
+2025-04-16 12:34:55,109 - INFO -  * Debugger PIN: 407-289-421
+2025-04-16 12:37:39,594 - INFO - Hauptseite aufgerufen
+2025-04-16 12:37:39,661 - INFO - 127.0.0.1 - - [16/Apr/2025 12:37:39] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 12:37:39,741 - INFO - 127.0.0.1 - - [16/Apr/2025 12:37:39] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:37:39,747 - INFO - 127.0.0.1 - - [16/Apr/2025 12:37:39] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:37:39,748 - INFO - 127.0.0.1 - - [16/Apr/2025 12:37:39] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 12:38:02,569 - INFO - Datei hochgeladen: converted.png
+2025-04-16 12:38:02,940 - INFO - Konvertierung erfolgreich: converted.png -> converted_f1c01969-8acb-4b1d-a6d7-d34881edb761.tiff
+2025-04-16 12:38:02,959 - INFO - 127.0.0.1 - - [16/Apr/2025 12:38:02] "POST /convert HTTP/1.1" 200 -
+2025-04-16 12:38:54,774 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 12:38:54,777 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_f1c01969-8acb-4b1d-a6d7-d34881edb761.tiff
+2025-04-16 12:38:54,869 - INFO -  * Restarting with stat
+2025-04-16 12:38:55,374 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 12:38:55,375 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 12:38:55,375 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 12:38:55,377 - INFO - Server gestartet
+2025-04-16 12:38:55,398 - WARNING -  * Debugger is active!
+2025-04-16 12:38:55,404 - INFO -  * Debugger PIN: 407-289-421
+2025-04-16 12:40:44,402 - INFO - Hauptseite aufgerufen
+2025-04-16 12:40:44,457 - INFO - 127.0.0.1 - - [16/Apr/2025 12:40:44] "GET / HTTP/1.1" 200 -
+2025-04-16 12:40:48,002 - INFO - Hauptseite aufgerufen
+2025-04-16 12:40:48,004 - INFO - 127.0.0.1 - - [16/Apr/2025 12:40:48] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 12:41:05,571 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 12:41:05,669 - INFO -  * Restarting with stat
+2025-04-16 12:41:06,154 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 12:41:06,155 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 12:41:06,156 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 12:41:06,158 - INFO - Server gestartet
+2025-04-16 12:41:06,180 - WARNING -  * Debugger is active!
+2025-04-16 12:41:06,185 - INFO -  * Debugger PIN: 407-289-421
+2025-04-16 12:41:07,948 - INFO - Hauptseite aufgerufen
+2025-04-16 12:41:08,003 - INFO - 127.0.0.1 - - [16/Apr/2025 12:41:08] "GET / HTTP/1.1" 200 -
+2025-04-16 12:41:08,084 - INFO - 127.0.0.1 - - [16/Apr/2025 12:41:08] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:41:08,089 - INFO - 127.0.0.1 - - [16/Apr/2025 12:41:08] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:41:08,091 - INFO - 127.0.0.1 - - [16/Apr/2025 12:41:08] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 12:43:41,717 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 12:43:41,790 - INFO -  * Restarting with stat
+2025-04-16 12:43:42,260 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 12:43:42,261 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 12:43:42,262 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 12:43:42,264 - INFO - Server gestartet
+2025-04-16 12:43:42,294 - WARNING -  * Debugger is active!
+2025-04-16 12:43:42,298 - INFO -  * Debugger PIN: 407-289-421
+2025-04-16 12:44:26,814 - INFO - Hauptseite aufgerufen
+2025-04-16 12:44:26,868 - INFO - 127.0.0.1 - - [16/Apr/2025 12:44:26] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 12:44:26,948 - INFO - 127.0.0.1 - - [16/Apr/2025 12:44:26] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:44:26,950 - INFO - 127.0.0.1 - - [16/Apr/2025 12:44:26] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:44:26,951 - INFO - 127.0.0.1 - - [16/Apr/2025 12:44:26] "GET /script.js HTTP/1.1" 200 -
+2025-04-16 12:44:32,387 - INFO - Datei hochgeladen: converted.wav
+2025-04-16 12:44:32,504 - INFO - Ausführung des Befehls: C:\ProgramData\chocolatey\bin\ffmpeg.exe -y -i C:\Own_projects\Shiftfile\ShiftFile\uploads\ff4fc998-c51a-4856-b883-720408026bb7_converted.wav -acodec libmp3lame -ab 192k C:\Own_projects\Shiftfile\ShiftFile\converted\converted_31f6394d-f881-4c14-923a-ef72587b9abf.mp3
+2025-04-16 12:44:32,783 - INFO - Konvertierung erfolgreich: converted.wav -> converted_31f6394d-f881-4c14-923a-ef72587b9abf.mp3
+2025-04-16 12:44:32,793 - INFO - 127.0.0.1 - - [16/Apr/2025 12:44:32] "POST /convert HTTP/1.1" 200 -
+2025-04-16 12:44:38,490 - INFO - Hauptseite aufgerufen
+2025-04-16 12:44:38,493 - INFO - 127.0.0.1 - - [16/Apr/2025 12:44:38] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 12:44:38,549 - INFO - 127.0.0.1 - - [16/Apr/2025 12:44:38] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:44:38,554 - INFO - 127.0.0.1 - - [16/Apr/2025 12:44:38] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:44:38,556 - INFO - 127.0.0.1 - - [16/Apr/2025 12:44:38] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 12:44:39,209 - INFO - Hauptseite aufgerufen
+2025-04-16 12:44:39,212 - INFO - 127.0.0.1 - - [16/Apr/2025 12:44:39] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 12:44:39,266 - INFO - 127.0.0.1 - - [16/Apr/2025 12:44:39] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:44:39,267 - INFO - 127.0.0.1 - - [16/Apr/2025 12:44:39] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:44:39,272 - INFO - 127.0.0.1 - - [16/Apr/2025 12:44:39] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 12:45:08,556 - INFO - Hauptseite aufgerufen
+2025-04-16 12:45:08,559 - INFO - 127.0.0.1 - - [16/Apr/2025 12:45:08] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 12:45:08,653 - INFO - 127.0.0.1 - - [16/Apr/2025 12:45:08] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:45:08,656 - INFO - 127.0.0.1 - - [16/Apr/2025 12:45:08] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:45:08,657 - INFO - 127.0.0.1 - - [16/Apr/2025 12:45:08] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 12:45:14,976 - INFO - Datei hochgeladen: converted.wav
+2025-04-16 12:45:15,081 - INFO - Ausführung des Befehls: C:\ProgramData\chocolatey\bin\ffmpeg.exe -y -i C:\Own_projects\Shiftfile\ShiftFile\uploads\9068eb67-4812-49d6-8328-e385edbcf766_converted.wav -acodec libmp3lame -ab 192k C:\Own_projects\Shiftfile\ShiftFile\converted\converted_7afe6cd6-5145-4457-b09d-dc89b759592f.mp3
+2025-04-16 12:45:15,365 - INFO - Konvertierung erfolgreich: converted.wav -> converted_7afe6cd6-5145-4457-b09d-dc89b759592f.mp3
+2025-04-16 12:45:15,376 - INFO - 127.0.0.1 - - [16/Apr/2025 12:45:15] "POST /convert HTTP/1.1" 200 -
+2025-04-16 12:47:18,372 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 12:47:18,375 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_31f6394d-f881-4c14-923a-ef72587b9abf.mp3
+2025-04-16 12:47:18,377 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_7afe6cd6-5145-4457-b09d-dc89b759592f.mp3
+2025-04-16 12:47:18,450 - INFO -  * Restarting with stat
+2025-04-16 12:47:18,920 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 12:47:18,921 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 12:47:18,921 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 12:47:18,923 - INFO - Server gestartet
+2025-04-16 12:47:18,947 - WARNING -  * Debugger is active!
+2025-04-16 12:47:18,951 - INFO -  * Debugger PIN: 407-289-421
+2025-04-16 12:47:34,234 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 12:47:34,319 - INFO -  * Restarting with stat
+2025-04-16 12:47:34,809 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 12:47:34,810 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 12:47:34,811 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 12:47:34,812 - INFO - Server gestartet
+2025-04-16 12:47:34,834 - WARNING -  * Debugger is active!
+2025-04-16 12:47:34,838 - INFO -  * Debugger PIN: 407-289-421
+2025-04-16 12:49:23,346 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 12:49:23,347 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 12:49:23,347 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 12:49:23,349 - INFO - Server gestartet
+2025-04-16 12:49:23,389 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-16 12:49:23,396 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-16 12:49:23,400 - INFO -  * Restarting with stat
+2025-04-16 12:49:23,841 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 12:49:23,842 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 12:49:23,843 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 12:49:23,847 - INFO - Server gestartet
+2025-04-16 12:49:23,914 - WARNING -  * Debugger is active!
+2025-04-16 12:49:23,929 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 12:49:31,432 - INFO - Hauptseite aufgerufen
+2025-04-16 12:49:31,501 - INFO - 127.0.0.1 - - [16/Apr/2025 12:49:31] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 12:49:31,586 - INFO - 127.0.0.1 - - [16/Apr/2025 12:49:31] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:49:31,607 - INFO - 127.0.0.1 - - [16/Apr/2025 12:49:31] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:49:31,613 - INFO - 127.0.0.1 - - [16/Apr/2025 12:49:31] "GET /script.js HTTP/1.1" 200 -
+2025-04-16 12:50:36,488 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 12:50:36,576 - INFO -  * Restarting with stat
+2025-04-16 12:50:37,073 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 12:50:37,074 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 12:50:37,075 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 12:50:37,077 - INFO - Server gestartet
+2025-04-16 12:50:37,099 - WARNING -  * Debugger is active!
+2025-04-16 12:50:37,103 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 12:51:12,257 - INFO - Hauptseite aufgerufen
+2025-04-16 12:51:12,326 - INFO - 127.0.0.1 - - [16/Apr/2025 12:51:12] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 12:51:12,422 - INFO - 127.0.0.1 - - [16/Apr/2025 12:51:12] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:51:12,426 - INFO - 127.0.0.1 - - [16/Apr/2025 12:51:12] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:51:12,428 - INFO - 127.0.0.1 - - [16/Apr/2025 12:51:12] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 12:51:42,394 - INFO - Datei hochgeladen: converted.png
+2025-04-16 12:51:42,754 - INFO - Konvertierung erfolgreich: converted.png -> converted_9bdd932e-4f3b-4b91-9ec2-115df683c146.gif
+2025-04-16 12:51:42,761 - INFO - 127.0.0.1 - - [16/Apr/2025 12:51:42] "POST /convert HTTP/1.1" 200 -
+2025-04-16 12:51:57,778 - INFO - Hauptseite aufgerufen
+2025-04-16 12:51:57,781 - INFO - 127.0.0.1 - - [16/Apr/2025 12:51:57] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 12:51:57,862 - INFO - 127.0.0.1 - - [16/Apr/2025 12:51:57] "GET /style.css HTTP/1.1" 200 -
+2025-04-16 12:51:57,868 - INFO - 127.0.0.1 - - [16/Apr/2025 12:51:57] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:51:57,870 - INFO - 127.0.0.1 - - [16/Apr/2025 12:51:57] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 12:52:57,987 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 12:52:57,990 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_9bdd932e-4f3b-4b91-9ec2-115df683c146.gif
+2025-04-16 12:52:58,226 - INFO -  * Restarting with stat
+2025-04-16 12:52:58,723 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 12:52:58,725 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 12:52:58,727 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 12:52:58,729 - INFO - Server gestartet
+2025-04-16 12:52:58,752 - WARNING -  * Debugger is active!
+2025-04-16 12:52:58,759 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 12:53:21,925 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 12:53:22,036 - INFO -  * Restarting with stat
+2025-04-16 12:53:22,491 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 12:53:22,492 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 12:53:22,493 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 12:53:22,495 - INFO - Server gestartet
+2025-04-16 12:53:22,513 - WARNING -  * Debugger is active!
+2025-04-16 12:53:22,519 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 12:56:45,811 - INFO - Hauptseite aufgerufen
+2025-04-16 12:56:45,864 - INFO - 127.0.0.1 - - [16/Apr/2025 12:56:45] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 12:56:45,957 - INFO - 127.0.0.1 - - [16/Apr/2025 12:56:45] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:56:45,960 - INFO - 127.0.0.1 - - [16/Apr/2025 12:56:45] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:56:45,962 - INFO - 127.0.0.1 - - [16/Apr/2025 12:56:45] "GET /script.js HTTP/1.1" 200 -
+2025-04-16 12:56:58,432 - INFO - Datei hochgeladen: lebenslauftest.jpg
+2025-04-16 12:56:58,593 - INFO - Konvertierung erfolgreich: lebenslauftest.jpg -> converted_b1b7260e-c875-4f58-a1c5-6c5183976d3b.png
+2025-04-16 12:56:58,613 - INFO - 127.0.0.1 - - [16/Apr/2025 12:56:58] "POST /convert HTTP/1.1" 200 -
+2025-04-16 12:58:07,931 - INFO - Hauptseite aufgerufen
+2025-04-16 12:58:07,934 - INFO - 127.0.0.1 - - [16/Apr/2025 12:58:07] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 12:58:07,993 - INFO - 127.0.0.1 - - [16/Apr/2025 12:58:07] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:58:07,995 - INFO - 127.0.0.1 - - [16/Apr/2025 12:58:07] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:58:07,999 - INFO - 127.0.0.1 - - [16/Apr/2025 12:58:07] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 12:58:40,039 - INFO - Datei hochgeladen: marseille.wav
+2025-04-16 12:58:40,041 - INFO - Ausführung des Befehls: ffmpeg -y -i C:\Own_projects\Shiftfile\ShiftFile\uploads\c9287c39-9594-4489-884a-1bde59c716f4_marseille.wav -acodec libmp3lame -ab 192k C:\Own_projects\Shiftfile\ShiftFile\converted\converted_b17fced0-ad77-4fac-bd44-3bdff1c526f3.mp3
+2025-04-16 12:58:40,055 - ERROR - Fehler bei der Audio-Konvertierung: [WinError 2] Das System kann die angegebene Datei nicht finden
+2025-04-16 12:58:40,062 - INFO - 127.0.0.1 - - [16/Apr/2025 12:58:40] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2025-04-16 12:58:47,490 - INFO - Datei hochgeladen: marseille.wav
+2025-04-16 12:58:47,492 - INFO - Ausführung des Befehls: ffmpeg -y -i C:\Own_projects\Shiftfile\ShiftFile\uploads\e33f35a0-15b3-44ba-8db2-0ce4daa9f5a3_marseille.wav -acodec libmp3lame -ab 192k C:\Own_projects\Shiftfile\ShiftFile\converted\converted_246a7df0-aee4-49ad-8d96-873413510878.mp3
+2025-04-16 12:58:47,508 - ERROR - Fehler bei der Audio-Konvertierung: [WinError 2] Das System kann die angegebene Datei nicht finden
+2025-04-16 12:58:47,516 - INFO - 127.0.0.1 - - [16/Apr/2025 12:58:47] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2025-04-16 12:58:50,365 - INFO - Hauptseite aufgerufen
+2025-04-16 12:58:50,368 - INFO - 127.0.0.1 - - [16/Apr/2025 12:58:50] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 12:58:50,430 - INFO - 127.0.0.1 - - [16/Apr/2025 12:58:50] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:58:50,433 - INFO - 127.0.0.1 - - [16/Apr/2025 12:58:50] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:58:50,436 - INFO - 127.0.0.1 - - [16/Apr/2025 12:58:50] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 12:59:09,906 - INFO - Datei hochgeladen: House-deep inside of you.wav
+2025-04-16 12:59:09,908 - INFO - Ausführung des Befehls: ffmpeg -y -i C:\Own_projects\Shiftfile\ShiftFile\uploads\6f5bdce2-c83c-4605-9b45-dd4fc5480b84_House-deep_inside_of_you.wav -acodec libmp3lame -ab 192k C:\Own_projects\Shiftfile\ShiftFile\converted\converted_beb48bd2-9776-4d59-95f1-5b07060a9dc1.mp3
+2025-04-16 12:59:09,921 - ERROR - Fehler bei der Audio-Konvertierung: [WinError 2] Das System kann die angegebene Datei nicht finden
+2025-04-16 12:59:09,930 - INFO - 127.0.0.1 - - [16/Apr/2025 12:59:09] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2025-04-16 13:04:16,114 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 13:04:16,121 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\uploads\6f5bdce2-c83c-4605-9b45-dd4fc5480b84_House-deep_inside_of_you.wav
+2025-04-16 13:04:16,126 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\uploads\c9287c39-9594-4489-884a-1bde59c716f4_marseille.wav
+2025-04-16 13:04:16,130 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\uploads\e33f35a0-15b3-44ba-8db2-0ce4daa9f5a3_marseille.wav
+2025-04-16 13:04:16,132 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_b1b7260e-c875-4f58-a1c5-6c5183976d3b.png
+2025-04-16 13:04:16,170 - INFO -  * Restarting with stat
+2025-04-16 13:04:16,430 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 13:04:16,430 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 13:04:16,431 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 13:04:16,432 - INFO - Server gestartet
+2025-04-16 13:04:16,442 - WARNING -  * Debugger is active!
+2025-04-16 13:04:16,445 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 13:04:48,779 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 13:04:48,780 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 13:04:48,780 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 13:04:48,781 - INFO - Server gestartet
+2025-04-16 13:04:48,807 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-16 13:04:48,807 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-16 13:04:48,808 - INFO -  * Restarting with stat
+2025-04-16 13:04:49,074 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 13:04:49,074 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 13:04:49,074 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 13:04:49,075 - INFO - Server gestartet
+2025-04-16 13:04:49,085 - WARNING -  * Debugger is active!
+2025-04-16 13:04:49,088 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 13:06:13,398 - INFO - Hauptseite aufgerufen
+2025-04-16 13:06:13,437 - INFO - 127.0.0.1 - - [16/Apr/2025 13:06:13] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 13:06:13,468 - INFO - 127.0.0.1 - - [16/Apr/2025 13:06:13] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 13:06:13,468 - INFO - 127.0.0.1 - - [16/Apr/2025 13:06:13] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 13:06:13,469 - INFO - 127.0.0.1 - - [16/Apr/2025 13:06:13] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 13:06:14,001 - INFO - Hauptseite aufgerufen
+2025-04-16 13:06:14,002 - INFO - 127.0.0.1 - - [16/Apr/2025 13:06:14] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 13:06:14,026 - INFO - 127.0.0.1 - - [16/Apr/2025 13:06:14] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 13:06:14,027 - INFO - 127.0.0.1 - - [16/Apr/2025 13:06:14] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 13:06:14,028 - INFO - 127.0.0.1 - - [16/Apr/2025 13:06:14] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 13:06:22,431 - INFO - Datei hochgeladen: House-deep inside of you.wav
+2025-04-16 13:06:22,433 - INFO - Ausführung des Befehls: C:\ProgramData\chocolatey\bin\ffmpeg.exe -y -i C:\Own_projects\Shiftfile\ShiftFile\uploads\adaf8fa1-bf7a-4715-bd15-62ca4a07a667_House-deep_inside_of_you.wav -acodec libmp3lame -ab 192k C:\Own_projects\Shiftfile\ShiftFile\converted\converted_3d1696b0-5107-47cc-84fe-4e4e01cfe3fd.mp3
+2025-04-16 13:06:24,818 - INFO - Konvertierung erfolgreich: House-deep inside of you.wav -> converted_3d1696b0-5107-47cc-84fe-4e4e01cfe3fd.mp3
+2025-04-16 13:06:24,834 - INFO - 127.0.0.1 - - [16/Apr/2025 13:06:24] "POST /convert HTTP/1.1" 200 -
+2025-04-16 13:10:04,643 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 13:10:04,647 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_3d1696b0-5107-47cc-84fe-4e4e01cfe3fd.mp3
+2025-04-16 13:10:04,744 - INFO -  * Restarting with stat
+2025-04-16 13:10:05,010 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 13:10:05,011 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 13:10:05,012 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 13:10:05,013 - INFO - Server gestartet
+2025-04-16 13:10:05,028 - WARNING -  * Debugger is active!
+2025-04-16 13:10:05,030 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 13:10:45,341 - INFO - Hauptseite aufgerufen
+2025-04-16 13:10:45,372 - INFO - 127.0.0.1 - - [16/Apr/2025 13:10:45] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 13:10:45,410 - INFO - 127.0.0.1 - - [16/Apr/2025 13:10:45] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 13:10:45,411 - INFO - 127.0.0.1 - - [16/Apr/2025 13:10:45] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 13:10:45,412 - INFO - 127.0.0.1 - - [16/Apr/2025 13:10:45] "GET /script.js HTTP/1.1" 200 -
+2025-04-16 13:11:06,257 - INFO - Datei hochgeladen: House-deep inside of you.wav
+2025-04-16 13:11:06,258 - INFO - Audio-Konvertierungsparameter:
+2025-04-16 13:11:06,260 - INFO - Volume: 20
+2025-04-16 13:11:06,261 - INFO - Speed: 2
+2025-04-16 13:11:06,261 - INFO - Fade-in: 0
+2025-04-16 13:11:06,263 - INFO - Fade-out: 0
+2025-04-16 13:11:06,264 - INFO - Normalize: false
+2025-04-16 13:11:06,265 - INFO - Mono: false
+2025-04-16 13:11:06,266 - INFO - Bitrate: 192k
+2025-04-16 13:11:06,268 - INFO - Angewandte Filter: volume=20dB,atempo=2
+2025-04-16 13:11:06,269 - INFO - FFmpeg-Befehl: C:\ProgramData\chocolatey\bin\ffmpeg.exe -y -i C:\Own_projects\Shiftfile\ShiftFile\uploads\d28a7282-18c1-4ccc-95a7-dfd95f1ef2ef_House-deep_inside_of_you.wav -af volume=20dB,atempo=2 -acodec libmp3lame -ab 192k C:\Own_projects\Shiftfile\ShiftFile\converted\converted_0047fecc-8b84-4e31-95a0-2c12322b2c01.mp3
+2025-04-16 13:11:07,568 - INFO - Audio-Konvertierung erfolgreich abgeschlossen
+2025-04-16 13:11:07,569 - INFO - Konvertierung erfolgreich: House-deep inside of you.wav -> converted_0047fecc-8b84-4e31-95a0-2c12322b2c01.mp3
+2025-04-16 13:11:07,584 - INFO - 127.0.0.1 - - [16/Apr/2025 13:11:07] "POST /convert HTTP/1.1" 200 -
+2025-04-16 13:11:40,602 - INFO - Hauptseite aufgerufen
+2025-04-16 13:11:40,604 - INFO - 127.0.0.1 - - [16/Apr/2025 13:11:40] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 13:11:40,684 - INFO - 127.0.0.1 - - [16/Apr/2025 13:11:40] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 13:11:40,687 - INFO - 127.0.0.1 - - [16/Apr/2025 13:11:40] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 13:11:40,689 - INFO - 127.0.0.1 - - [16/Apr/2025 13:11:40] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 13:11:56,000 - INFO - Datei hochgeladen: House-deep inside of you.wav
+2025-04-16 13:11:56,002 - INFO - Audio-Konvertierungsparameter:
+2025-04-16 13:11:56,004 - INFO - Volume: 20
+2025-04-16 13:11:56,007 - INFO - Speed: 2
+2025-04-16 13:11:56,009 - INFO - Fade-in: 5
+2025-04-16 13:11:56,010 - INFO - Fade-out: 0
+2025-04-16 13:11:56,012 - INFO - Normalize: false
+2025-04-16 13:11:56,014 - INFO - Mono: false
+2025-04-16 13:11:56,015 - INFO - Bitrate: 192k
+2025-04-16 13:11:56,016 - INFO - Angewandte Filter: volume=20dB,atempo=2,afade=t=in:st=0:d=5
+2025-04-16 13:11:56,017 - INFO - FFmpeg-Befehl: C:\ProgramData\chocolatey\bin\ffmpeg.exe -y -i C:\Own_projects\Shiftfile\ShiftFile\uploads\1ca07217-8412-414e-86ec-f56f2cef884c_House-deep_inside_of_you.wav -af volume=20dB,atempo=2,afade=t=in:st=0:d=5 -acodec libmp3lame -ab 192k C:\Own_projects\Shiftfile\ShiftFile\converted\converted_ffd98d96-b86f-41a9-9557-d8ba08a31ed8.mp3
+2025-04-16 13:11:57,263 - INFO - Audio-Konvertierung erfolgreich abgeschlossen
+2025-04-16 13:11:57,264 - INFO - Konvertierung erfolgreich: House-deep inside of you.wav -> converted_ffd98d96-b86f-41a9-9557-d8ba08a31ed8.mp3
+2025-04-16 13:11:57,284 - INFO - 127.0.0.1 - - [16/Apr/2025 13:11:57] "POST /convert HTTP/1.1" 200 -
+2025-04-16 13:14:23,421 - INFO - Hauptseite aufgerufen
+2025-04-16 13:14:23,422 - INFO - 127.0.0.1 - - [16/Apr/2025 13:14:23] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 13:14:23,465 - INFO - 127.0.0.1 - - [16/Apr/2025 13:14:23] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 13:14:23,468 - INFO - 127.0.0.1 - - [16/Apr/2025 13:14:23] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 13:14:23,468 - INFO - 127.0.0.1 - - [16/Apr/2025 13:14:23] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 13:14:34,565 - INFO - Datei hochgeladen: converted.png
+2025-04-16 13:14:34,827 - INFO - Konvertierung erfolgreich: converted.png -> converted_87ba2613-aef6-4b50-a33b-49b60aff894f.tiff
+2025-04-16 13:14:34,850 - INFO - 127.0.0.1 - - [16/Apr/2025 13:14:34] "POST /convert HTTP/1.1" 200 -
+2025-04-16 13:15:15,677 - INFO - 127.0.0.1 - - [16/Apr/2025 13:15:15] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 13:15:43,883 - INFO - Datei hochgeladen: converted.wav
+2025-04-16 13:15:43,885 - INFO - Audio-Konvertierungsparameter:
+2025-04-16 13:15:43,886 - INFO - Volume: 0
+2025-04-16 13:15:43,887 - INFO - Speed: 2
+2025-04-16 13:15:43,888 - INFO - Fade-in: 0
+2025-04-16 13:15:43,890 - INFO - Fade-out: 0
+2025-04-16 13:15:43,892 - INFO - Normalize: false
+2025-04-16 13:15:43,893 - INFO - Mono: false
+2025-04-16 13:15:43,894 - INFO - Bitrate: 192k
+2025-04-16 13:15:43,896 - INFO - Angewandte Filter: atempo=2
+2025-04-16 13:15:43,897 - INFO - FFmpeg-Befehl: C:\ProgramData\chocolatey\bin\ffmpeg.exe -y -i C:\Own_projects\Shiftfile\ShiftFile\uploads\3f1dbd9d-fa19-447d-b117-1ca967501bad_converted.wav -af atempo=2 -acodec libmp3lame -ab 192k C:\Own_projects\Shiftfile\ShiftFile\converted\converted_f8e7a026-a1b1-4981-8532-0103f79362be.mp3
+2025-04-16 13:15:44,057 - INFO - Audio-Konvertierung erfolgreich abgeschlossen
+2025-04-16 13:15:44,058 - INFO - Konvertierung erfolgreich: converted.wav -> converted_f8e7a026-a1b1-4981-8532-0103f79362be.mp3
+2025-04-16 13:15:44,066 - INFO - 127.0.0.1 - - [16/Apr/2025 13:15:44] "POST /convert HTTP/1.1" 200 -
+2025-04-16 13:16:03,990 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 13:16:03,995 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_0047fecc-8b84-4e31-95a0-2c12322b2c01.mp3
+2025-04-16 13:16:03,997 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_87ba2613-aef6-4b50-a33b-49b60aff894f.tiff
+2025-04-16 13:16:03,999 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_f8e7a026-a1b1-4981-8532-0103f79362be.mp3
+2025-04-16 13:16:04,001 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_ffd98d96-b86f-41a9-9557-d8ba08a31ed8.mp3
+2025-04-16 13:16:04,110 - INFO -  * Restarting with stat
+2025-04-16 13:16:04,397 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 13:16:04,398 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 13:16:04,398 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 13:16:04,400 - INFO - Server gestartet
+2025-04-16 13:16:04,410 - WARNING -  * Debugger is active!
+2025-04-16 13:16:04,414 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 13:24:10,918 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 13:24:10,919 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 13:24:10,919 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 13:24:10,958 - INFO - Server gestartet
+2025-04-16 13:24:10,982 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-16 13:24:10,983 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-16 13:24:10,984 - INFO -  * Restarting with stat
+2025-04-16 13:24:11,234 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 13:24:11,234 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 13:24:11,235 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 13:24:11,260 - INFO - Server gestartet
+2025-04-16 13:24:11,271 - WARNING -  * Debugger is active!
+2025-04-16 13:24:11,274 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 13:24:15,378 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:15] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 13:24:15,451 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:15] "GET /style.css HTTP/1.1" 200 -
+2025-04-16 13:24:15,454 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:15] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 13:24:15,454 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:15] "GET /script.js HTTP/1.1" 200 -
+2025-04-16 13:24:18,084 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:18] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 13:24:18,119 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:18] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 13:24:18,121 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:18] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 13:24:18,123 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:18] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 13:24:27,951 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:27] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 13:24:27,989 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:27] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 13:24:27,992 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:27] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 13:24:27,993 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:27] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 13:24:35,998 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:35] "POST /convert HTTP/1.1" 200 -
+2025-04-16 13:24:39,215 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:39] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 13:24:39,247 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:39] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 13:24:39,252 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:39] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 13:24:39,255 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:39] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 13:24:49,466 - INFO - 127.0.0.1 - - [16/Apr/2025 13:24:49] "POST /convert HTTP/1.1" 200 -
+2025-04-16 13:27:58,834 - INFO - 127.0.0.1 - - [16/Apr/2025 13:27:58] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 13:27:58,882 - INFO - 127.0.0.1 - - [16/Apr/2025 13:27:58] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 13:27:58,882 - INFO - 127.0.0.1 - - [16/Apr/2025 13:27:58] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 13:27:58,883 - INFO - 127.0.0.1 - - [16/Apr/2025 13:27:58] "GET /script.js HTTP/1.1" 200 -
+2025-04-16 13:28:12,989 - INFO - 127.0.0.1 - - [16/Apr/2025 13:28:12] "POST /convert HTTP/1.1" 200 -
+2025-04-16 13:37:47,705 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 13:37:47,836 - INFO -  * Restarting with stat
+2025-04-16 13:55:16,727 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 13:55:16,728 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 13:55:16,728 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 13:55:16,760 - INFO - Server gestartet
+2025-04-16 13:55:16,870 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-16 13:55:16,871 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-16 13:55:16,872 - INFO -  * Restarting with stat
+2025-04-16 13:55:17,132 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 13:55:17,133 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 13:55:17,133 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 13:55:17,166 - INFO - Server gestartet
+2025-04-16 13:55:17,202 - WARNING -  * Debugger is active!
+2025-04-16 13:55:17,205 - INFO -  * Debugger PIN: 144-333-576
+2025-04-16 13:56:16,165 - INFO - 127.0.0.1 - - [16/Apr/2025 13:56:16] "GET / HTTP/1.1" 200 -
+2025-04-16 13:56:16,225 - INFO - 127.0.0.1 - - [16/Apr/2025 13:56:16] "GET /styles.css HTTP/1.1" 200 -
+2025-04-16 13:56:16,226 - INFO - 127.0.0.1 - - [16/Apr/2025 13:56:16] "GET /script.js HTTP/1.1" 200 -
+2025-04-16 13:56:16,259 - INFO - 127.0.0.1 - - [16/Apr/2025 13:56:16] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+2025-04-16 13:56:59,755 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 13:56:59,789 - INFO -  * Restarting with stat
+2025-04-16 13:57:00,078 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 13:57:00,079 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 13:57:00,079 - INFO - Verzeichnis bereit: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 13:57:00,108 - INFO - Server gestartet
+2025-04-16 13:57:00,121 - WARNING -  * Debugger is active!
+2025-04-16 13:57:00,124 - INFO -  * Debugger PIN: 144-333-576
+2025-04-16 13:57:01,851 - INFO - 127.0.0.1 - - [16/Apr/2025 13:57:01] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 13:57:01,892 - INFO - 127.0.0.1 - - [16/Apr/2025 13:57:01] "[36mGET /styles.css HTTP/1.1[0m" 304 -
+2025-04-16 13:57:01,893 - INFO - 127.0.0.1 - - [16/Apr/2025 13:57:01] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 13:57:02,686 - INFO - 127.0.0.1 - - [16/Apr/2025 13:57:02] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 13:57:02,709 - INFO - 127.0.0.1 - - [16/Apr/2025 13:57:02] "[36mGET /styles.css HTTP/1.1[0m" 304 -
+2025-04-16 13:57:02,711 - INFO - 127.0.0.1 - - [16/Apr/2025 13:57:02] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 13:57:03,037 - INFO - 127.0.0.1 - - [16/Apr/2025 13:57:03] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 13:57:03,064 - INFO - 127.0.0.1 - - [16/Apr/2025 13:57:03] "[36mGET /styles.css HTTP/1.1[0m" 304 -
+2025-04-16 13:57:03,065 - INFO - 127.0.0.1 - - [16/Apr/2025 13:57:03] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 13:57:03,182 - INFO - 127.0.0.1 - - [16/Apr/2025 13:57:03] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 13:57:03,207 - INFO - 127.0.0.1 - - [16/Apr/2025 13:57:03] "[36mGET /styles.css HTTP/1.1[0m" 304 -
+2025-04-16 13:57:03,208 - INFO - 127.0.0.1 - - [16/Apr/2025 13:57:03] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 13:57:03,317 - INFO - 127.0.0.1 - - [16/Apr/2025 13:57:03] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 13:57:03,349 - INFO - 127.0.0.1 - - [16/Apr/2025 13:57:03] "[36mGET /styles.css HTTP/1.1[0m" 304 -
+2025-04-16 13:57:03,350 - INFO - 127.0.0.1 - - [16/Apr/2025 13:57:03] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 14:09:16,159 - INFO - 127.0.0.1 - - [16/Apr/2025 14:09:16] "GET / HTTP/1.1" 200 -
+2025-04-16 14:09:16,223 - INFO - 127.0.0.1 - - [16/Apr/2025 14:09:16] "GET /style.css HTTP/1.1" 200 -
+2025-04-16 14:09:16,277 - INFO - 127.0.0.1 - - [16/Apr/2025 14:09:16] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 14:09:21,032 - INFO - 127.0.0.1 - - [16/Apr/2025 14:09:21] "[33mGET /impressum HTTP/1.1[0m" 404 -
+2025-04-16 14:10:19,524 - ERROR - Fehler bei der Konvertierung: cannot write mode P as JPEG
+2025-04-16 14:10:19,526 - INFO - 127.0.0.1 - - [16/Apr/2025 14:10:19] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2025-04-16 14:10:47,519 - INFO - 127.0.0.1 - - [16/Apr/2025 14:10:47] "POST /convert HTTP/1.1" 200 -
+2025-04-16 14:14:38,987 - INFO - 127.0.0.1 - - [16/Apr/2025 14:14:38] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 14:14:39,050 - INFO - 127.0.0.1 - - [16/Apr/2025 14:14:39] "GET /style.css HTTP/1.1" 200 -
+2025-04-16 14:14:39,059 - INFO - 127.0.0.1 - - [16/Apr/2025 14:14:39] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 14:15:00,945 - ERROR - Fehler bei der Konvertierung: cannot write mode P as JPEG
+2025-04-16 14:15:00,947 - INFO - 127.0.0.1 - - [16/Apr/2025 14:15:00] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2025-04-16 14:15:11,212 - INFO - 127.0.0.1 - - [16/Apr/2025 14:15:11] "POST /convert HTTP/1.1" 200 -
+2025-04-16 14:15:19,618 - ERROR - Fehler bei der Konvertierung: cannot write mode P as JPEG
+2025-04-16 14:15:19,619 - INFO - 127.0.0.1 - - [16/Apr/2025 14:15:19] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2025-04-16 14:17:42,343 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 14:17:42,399 - INFO -  * Restarting with stat

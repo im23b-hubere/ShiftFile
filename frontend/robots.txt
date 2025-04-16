@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /convert
+Disallow: /uploads/
+Disallow: /converted/
+
+Sitemap: https://shiftfile.vercel.app/sitemap.xml 
