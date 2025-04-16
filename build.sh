@@ -1,16 +1,10 @@
 #!/bin/bash
 
-# System-Pakete aktualisieren
-apt-get update
-apt-get install -y software-properties-common
-
-# FFmpeg Repository hinzufügen und installieren
-add-apt-repository -y ppa:jonathonf/ffmpeg-4
+# FFmpeg installieren
 apt-get update
 apt-get install -y ffmpeg
 
 # Python-Abhängigkeiten installieren
-pip install --upgrade pip
 pip install -r requirements.txt
 
 # Berechtigungen für FFmpeg setzen
