@@ -183,7 +183,6 @@ button:disabled {
     box-shadow: var(--box-shadow);
 }
 
-/* Responsive Design */
 @media (max-width: 600px) {
     .container {
         padding: 1rem;

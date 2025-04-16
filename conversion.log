@@ -123,3 +123,33 @@
 2025-04-16 11:22:07,514 - INFO - Datei hochgeladen: converted.png
 2025-04-16 11:22:07,535 - ERROR - Fehler bei der Konvertierung von converted.png: 'JPG'
 2025-04-16 11:22:07,536 - INFO - 127.0.0.1 - - [16/Apr/2025 11:22:07] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2025-04-16 11:23:52,979 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 11:23:52,979 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 11:23:52,979 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 11:23:52,980 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\uploads\0d0c9036-5fad-4331-8cab-9212c862e6b3_converted.png
+2025-04-16 11:23:52,981 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\uploads\63c426f1-2550-4af2-aebf-5183ec10edd4_converted.png
+2025-04-16 11:23:52,981 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_2664fa97-6dab-4731-993f-0502faf9676d.png
+2025-04-16 11:23:52,981 - INFO - Server gestartet
+2025-04-16 11:23:53,011 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-16 11:23:53,012 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-16 11:23:53,017 - INFO -  * Restarting with stat
+2025-04-16 11:23:53,282 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 11:23:53,282 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 11:23:53,283 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 11:23:53,284 - INFO - Server gestartet
+2025-04-16 11:23:53,296 - WARNING -  * Debugger is active!
+2025-04-16 11:23:53,301 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 11:24:00,086 - INFO - Hauptseite aufgerufen
+2025-04-16 11:24:00,138 - INFO - 127.0.0.1 - - [16/Apr/2025 11:24:00] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 11:24:00,185 - INFO - 127.0.0.1 - - [16/Apr/2025 11:24:00] "GET /style.css HTTP/1.1" 200 -
+2025-04-16 11:24:00,186 - INFO - 127.0.0.1 - - [16/Apr/2025 11:24:00] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 11:24:00,187 - INFO - 127.0.0.1 - - [16/Apr/2025 11:24:00] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 11:25:39,628 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 11:25:39,701 - INFO -  * Restarting with stat
+2025-04-16 11:25:39,987 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 11:25:39,988 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 11:25:39,988 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 11:25:39,989 - INFO - Server gestartet
+2025-04-16 11:25:40,001 - WARNING -  * Debugger is active!
+2025-04-16 11:25:40,006 - INFO -  * Debugger PIN: 902-726-082

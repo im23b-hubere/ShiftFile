@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadLink = document.getElementById('downloadLink');
     const convertTo = document.getElementById('convertTo');
 
-    // Drag & Drop Events
     dropZone.addEventListener('dragover', (e) => {
         e.preventDefault();
         dropZone.classList.add('dragover');
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         handleFiles(e.dataTransfer.files);
     });
 
-    // Click to upload
     dropZone.addEventListener('click', () => {
         fileInput.click();
     });

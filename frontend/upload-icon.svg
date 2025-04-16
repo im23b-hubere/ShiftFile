@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <!-- Äußerer Kreis -->
         <circle cx="40" cy="40" r="38" stroke="#4a90e2" stroke-width="3" opacity="0.2"/>
         
-        <!-- Innerer Kreis mit Animation -->
         <circle cx="40" cy="40" r="32" stroke="#4a90e2" stroke-width="3" opacity="0.6"/>
         
-        <!-- Upload-Pfeil -->
         <g transform="translate(24, 24)" stroke="#4a90e2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <!-- Vertikale Linie -->
             <line x1="16" y1="32" x2="16" y2="8"/>
-            <!-- Pfeilspitze -->
             <polyline points="6 18 16 8 26 18"/>
         </g>
     </g>
