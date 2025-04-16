@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, send_file, jsonify
+from flask import Flask, request, send_file, jsonify, send_from_directory
 from PIL import Image
 import uuid
 import logging
@@ -13,7 +13,10 @@ from werkzeug.utils import secure_filename
 TEMP_DIR = '/tmp' if os.getenv('VERCEL_ENV') else 'temp'
 os.makedirs(TEMP_DIR, exist_ok=True)
 
-app = Flask(__name__)
+# Frontend-Verzeichnis konfigurieren
+FRONTEND_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'frontend')
+
+app = Flask(__name__, static_folder=FRONTEND_DIR, static_url_path='')
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max-limit
 
 # Logging-Konfiguration
@@ -190,7 +193,13 @@ def convert_file():
 
 @app.route('/')
 def index():
-    return 'ShiftFile API is running'
+    """Serve the frontend"""
+    return send_from_directory(FRONTEND_DIR, 'index.html')
+
+@app.route('/<path:path>')
+def serve_static(path):
+    """Serve static files"""
+    return send_from_directory(FRONTEND_DIR, path)
 
 @app.route('/formats')
 def get_formats():
