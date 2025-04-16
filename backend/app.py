@@ -8,6 +8,7 @@ import logging
 import sys
 import atexit
 import glob
+import subprocess
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FRONTEND_DIR = os.path.join(BASE_DIR, 'frontend')
@@ -17,11 +18,17 @@ LOG_FILE = os.path.join(BASE_DIR, 'conversion.log')
 
 app = Flask(__name__, static_folder=FRONTEND_DIR, static_url_path='')
 
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+ALLOWED_IMAGE_EXTENSIONS = {'png', 'jpg', 'jpeg', 'webp', 'gif', 'tiff'}
+ALLOWED_AUDIO_EXTENSIONS = {'mp3', 'wav'}
+ALLOWED_EXTENSIONS = ALLOWED_IMAGE_EXTENSIONS.union(ALLOWED_AUDIO_EXTENSIONS)
+
 FORMAT_MAPPING = {
     'JPG': 'JPEG',
     'JPEG': 'JPEG',
-    'PNG': 'PNG'
+    'PNG': 'PNG',
+    'WEBP': 'WEBP',
+    'GIF': 'GIF',
+    'TIFF': 'TIFF'
 }
 
 logging.basicConfig(
@@ -42,6 +49,54 @@ for directory in [FRONTEND_DIR, UPLOAD_DIR, CONVERTED_DIR]:
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def is_image_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_IMAGE_EXTENSIONS
+
+def is_audio_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_AUDIO_EXTENSIONS
+
+def get_ffmpeg_path():
+    """Sucht nach dem FFmpeg-Executable im System"""
+    possible_paths = [
+        r"C:\ProgramData\chocolatey\bin\ffmpeg.exe",
+        r"C:\Program Files\ffmpeg\bin\ffmpeg.exe",
+        r"C:\ProgramData\chocolatey\lib\ffmpeg\tools\ffmpeg.exe",
+        "ffmpeg"  
+    ]
+    
+    for path in possible_paths:
+        try:
+            result = subprocess.run([path, "-version"], capture_output=True, text=True)
+            if result.returncode == 0:
+                return path
+        except:
+            continue
+    
+    return None
+
+def convert_audio(input_path, output_path, target_format):
+    try:
+        ffmpeg_path = get_ffmpeg_path()
+        if not ffmpeg_path:
+            logging.error("FFmpeg wurde nicht gefunden. Bitte installieren Sie FFmpeg.")
+            return False
+            
+        if target_format.lower() == 'mp3':
+            command = [ffmpeg_path, '-y', '-i', input_path, '-acodec', 'libmp3lame', '-ab', '192k', output_path]
+        else:  
+            command = [ffmpeg_path, '-y', '-i', input_path, '-acodec', 'pcm_s16le', output_path]
+        
+        logging.info(f"Ausführung des Befehls: {' '.join(command)}")
+        result = subprocess.run(command, capture_output=True, text=True)
+        
+        if result.returncode != 0:
+            logging.error(f'FFmpeg Fehler: {result.stderr}')
+            return False
+        return True
+    except Exception as e:
+        logging.error(f'Fehler bei der Audio-Konvertierung: {str(e)}')
+        return False
 
 def clean_old_files():
     """Lösche alte temporäre Dateien"""
@@ -69,7 +124,7 @@ def index():
         return f'Fehler beim Laden der Seite: {str(e)}', 500
 
 @app.route('/convert', methods=['POST'])
-def convert_image():
+def convert_file():
     if 'file' not in request.files:
         logging.error('Keine Datei im Request gefunden')
         return 'Keine Datei gefunden', 400
@@ -90,31 +145,40 @@ def convert_image():
         file.save(input_path)
         logging.info(f'Datei hochgeladen: {file.filename}')
         
-        with Image.open(input_path) as img:
-            target_format = request.form.get('format', 'png').upper()
+        target_format = request.form.get('format', 'png').upper()
+        output_filename = f"converted_{uuid.uuid4()}.{target_format.lower()}"
+        output_path = os.path.join(CONVERTED_DIR, output_filename)
+
+        if is_image_file(file.filename):
             if target_format not in FORMAT_MAPPING:
-                logging.error(f'Ungültiges Zielformat: {target_format}')
-                return 'Ungültiges Zielformat', 400
+                logging.error(f'Ungültiges Bildformat: {target_format}')
+                return 'Ungültiges Bildformat', 400
 
-            if img.mode == 'RGBA' and FORMAT_MAPPING[target_format] == 'JPEG':
-                img = img.convert('RGB')
+            with Image.open(input_path) as img:
+                if img.mode == 'RGBA' and FORMAT_MAPPING[target_format] == 'JPEG':
+                    img = img.convert('RGB')
+                img.save(output_path, format=FORMAT_MAPPING[target_format])
 
-            output_filename = f"converted_{uuid.uuid4()}.{target_format.lower()}"
-            output_path = os.path.join(CONVERTED_DIR, output_filename)
-            img.save(output_path, format=FORMAT_MAPPING[target_format])
-            
-            logging.info(f'Konvertierung erfolgreich: {file.filename} -> {output_filename}')
-            
-            try:
-                os.remove(input_path)
-            except Exception as e:
-                logging.warning(f'Konnte Upload nicht löschen: {str(e)}')
+        elif is_audio_file(file.filename):
+            if target_format.lower() not in ALLOWED_AUDIO_EXTENSIONS:
+                logging.error(f'Ungültiges Audioformat: {target_format}')
+                return 'Ungültiges Audioformat', 400
 
-            return send_file(
-                output_path,
-                as_attachment=True,
-                download_name=f"converted_{os.path.splitext(file.filename)[0]}.{target_format.lower()}"
-            )
+            if not convert_audio(input_path, output_path, target_format):
+                return 'Fehler bei der Audio-Konvertierung', 500
+
+        logging.info(f'Konvertierung erfolgreich: {file.filename} -> {output_filename}')
+        
+        try:
+            os.remove(input_path)
+        except Exception as e:
+            logging.warning(f'Konnte Upload nicht löschen: {str(e)}')
+
+        return send_file(
+            output_path,
+            as_attachment=True,
+            download_name=f"converted_{os.path.splitext(file.filename)[0]}.{target_format.lower()}"
+        )
 
     except Exception as e:
         error_msg = f'Fehler bei der Konvertierung von {file.filename}: {str(e)}'

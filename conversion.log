@@ -195,3 +195,99 @@
 2025-04-16 11:37:41,756 - INFO - 127.0.0.1 - - [16/Apr/2025 11:37:41] "[36mGET /style.css HTTP/1.1[0m" 304 -
 2025-04-16 11:37:41,763 - INFO - 127.0.0.1 - - [16/Apr/2025 11:37:41] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
 2025-04-16 11:37:41,765 - INFO - 127.0.0.1 - - [16/Apr/2025 11:37:41] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 11:39:33,892 - INFO - Hauptseite aufgerufen
+2025-04-16 11:39:33,893 - INFO - 127.0.0.1 - - [16/Apr/2025 11:39:33] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 11:39:33,931 - INFO - 127.0.0.1 - - [16/Apr/2025 11:39:33] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 11:39:33,932 - INFO - 127.0.0.1 - - [16/Apr/2025 11:39:33] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:39:33,932 - INFO - 127.0.0.1 - - [16/Apr/2025 11:39:33] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 11:40:37,215 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 11:40:37,217 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_a3720ec7-5c13-49de-8663-753dcf122231.jpg
+2025-04-16 11:40:37,218 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_b499286d-2c47-4fec-919e-0b402160bb6a.jpg
+2025-04-16 11:40:37,219 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_d412d743-33b0-43a5-b10e-485b4e6554db.jpg
+2025-04-16 11:40:37,268 - INFO -  * Restarting with stat
+2025-04-16 12:22:46,505 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 12:22:46,506 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 12:22:46,507 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 12:22:46,509 - INFO - Server gestartet
+2025-04-16 12:22:46,701 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-16 12:22:46,701 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-16 12:22:46,705 - INFO -  * Restarting with stat
+2025-04-16 12:22:47,252 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 12:22:47,252 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 12:22:47,252 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 12:22:47,254 - INFO - Server gestartet
+2025-04-16 12:22:47,287 - WARNING -  * Debugger is active!
+2025-04-16 12:22:47,292 - INFO -  * Debugger PIN: 407-289-421
+2025-04-16 12:23:58,236 - INFO - Hauptseite aufgerufen
+2025-04-16 12:23:58,317 - INFO - 127.0.0.1 - - [16/Apr/2025 12:23:58] "GET / HTTP/1.1" 200 -
+2025-04-16 12:23:58,384 - INFO - 127.0.0.1 - - [16/Apr/2025 12:23:58] "GET /style.css HTTP/1.1" 200 -
+2025-04-16 12:23:58,388 - INFO - 127.0.0.1 - - [16/Apr/2025 12:23:58] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:23:58,390 - INFO - 127.0.0.1 - - [16/Apr/2025 12:23:58] "GET /script.js HTTP/1.1" 200 -
+2025-04-16 12:24:10,558 - INFO - Datei hochgeladen: aggressiver_drill_beat.wav
+2025-04-16 12:24:10,565 - ERROR - Fehler bei der Audio-Konvertierung: [WinError 2] Das System kann die angegebene Datei nicht finden
+2025-04-16 12:24:10,567 - INFO - 127.0.0.1 - - [16/Apr/2025 12:24:10] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2025-04-16 12:24:15,467 - INFO - Hauptseite aufgerufen
+2025-04-16 12:24:15,470 - INFO - 127.0.0.1 - - [16/Apr/2025 12:24:15] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 12:24:15,566 - INFO - 127.0.0.1 - - [16/Apr/2025 12:24:15] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:24:15,570 - INFO - 127.0.0.1 - - [16/Apr/2025 12:24:15] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:24:15,571 - INFO - 127.0.0.1 - - [16/Apr/2025 12:24:15] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 12:24:23,352 - INFO - Datei hochgeladen: aggressiver_drill_beat.wav
+2025-04-16 12:24:23,359 - ERROR - Fehler bei der Audio-Konvertierung: [WinError 2] Das System kann die angegebene Datei nicht finden
+2025-04-16 12:24:23,361 - INFO - 127.0.0.1 - - [16/Apr/2025 12:24:23] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2025-04-16 12:27:10,087 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 12:27:10,091 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\uploads\92d09c76-dd03-4707-8684-993e7aabd8c0_aggressiver_drill_beat.wav
+2025-04-16 12:27:10,094 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\uploads\efbedd2e-a106-4cb1-8752-bec206f28387_aggressiver_drill_beat.wav
+2025-04-16 12:27:10,186 - INFO -  * Restarting with stat
+2025-04-16 12:27:10,718 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 12:27:10,719 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 12:27:10,720 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 12:27:10,724 - INFO - Server gestartet
+2025-04-16 12:27:10,750 - WARNING -  * Debugger is active!
+2025-04-16 12:27:10,754 - INFO -  * Debugger PIN: 407-289-421
+2025-04-16 12:27:20,987 - INFO - Hauptseite aufgerufen
+2025-04-16 12:27:21,062 - INFO - 127.0.0.1 - - [16/Apr/2025 12:27:21] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 12:27:21,150 - INFO - 127.0.0.1 - - [16/Apr/2025 12:27:21] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:27:21,152 - INFO - 127.0.0.1 - - [16/Apr/2025 12:27:21] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:27:21,153 - INFO - 127.0.0.1 - - [16/Apr/2025 12:27:21] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 12:27:27,900 - INFO - Datei hochgeladen: aggressiver_drill_beat.wav
+2025-04-16 12:27:27,903 - ERROR - Fehler bei der Audio-Konvertierung: [WinError 2] Das System kann die angegebene Datei nicht finden
+2025-04-16 12:27:27,906 - INFO - 127.0.0.1 - - [16/Apr/2025 12:27:27] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2025-04-16 12:28:00,793 - INFO - Datei hochgeladen: aggressiver_drill_beat.wav
+2025-04-16 12:28:00,795 - ERROR - Fehler bei der Audio-Konvertierung: [WinError 2] Das System kann die angegebene Datei nicht finden
+2025-04-16 12:28:00,796 - INFO - 127.0.0.1 - - [16/Apr/2025 12:28:00] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2025-04-16 12:30:22,387 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 12:30:22,393 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\uploads\1ead6d4e-7b7f-449f-ae70-9efb13a45916_aggressiver_drill_beat.wav
+2025-04-16 12:30:22,396 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\uploads\f6754665-ef38-4987-86a9-64adc31b57ac_aggressiver_drill_beat.wav
+2025-04-16 12:30:22,516 - INFO -  * Restarting with stat
+2025-04-16 12:30:23,050 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 12:30:23,051 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 12:30:23,052 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 12:30:23,054 - INFO - Server gestartet
+2025-04-16 12:30:23,084 - WARNING -  * Debugger is active!
+2025-04-16 12:30:23,089 - INFO -  * Debugger PIN: 407-289-421
+2025-04-16 12:31:20,724 - INFO - Hauptseite aufgerufen
+2025-04-16 12:31:20,807 - INFO - 127.0.0.1 - - [16/Apr/2025 12:31:20] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 12:31:20,894 - INFO - 127.0.0.1 - - [16/Apr/2025 12:31:20] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:31:20,896 - INFO - 127.0.0.1 - - [16/Apr/2025 12:31:20] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:31:20,897 - INFO - 127.0.0.1 - - [16/Apr/2025 12:31:20] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 12:31:25,223 - INFO - Datei hochgeladen: aggressiver_drill_beat.wav
+2025-04-16 12:31:26,629 - INFO - Ausführung des Befehls: C:\ProgramData\chocolatey\bin\ffmpeg.exe -y -i C:\Own_projects\Shiftfile\ShiftFile\uploads\60591c53-0e6b-4e1d-8cba-d45a71fae401_aggressiver_drill_beat.wav -acodec libmp3lame -ab 192k C:\Own_projects\Shiftfile\ShiftFile\converted\converted_16c37ff2-6e86-49c7-820a-914a932f2db1.mp3
+2025-04-16 12:31:26,903 - INFO - Konvertierung erfolgreich: aggressiver_drill_beat.wav -> converted_16c37ff2-6e86-49c7-820a-914a932f2db1.mp3
+2025-04-16 12:31:26,912 - INFO - 127.0.0.1 - - [16/Apr/2025 12:31:26] "POST /convert HTTP/1.1" 200 -
+2025-04-16 12:31:43,492 - INFO - Datei hochgeladen: converted.mp3
+2025-04-16 12:31:43,622 - INFO - Ausführung des Befehls: C:\ProgramData\chocolatey\bin\ffmpeg.exe -y -i C:\Own_projects\Shiftfile\ShiftFile\uploads\83c0e2d9-2d56-4f13-b054-8c3c779e78a5_converted.mp3 -acodec pcm_s16le C:\Own_projects\Shiftfile\ShiftFile\converted\converted_30748392-495f-4935-876d-e79b08c3c4e9.wav
+2025-04-16 12:31:43,794 - INFO - Konvertierung erfolgreich: converted.mp3 -> converted_30748392-495f-4935-876d-e79b08c3c4e9.wav
+2025-04-16 12:31:43,800 - INFO - 127.0.0.1 - - [16/Apr/2025 12:31:43] "POST /convert HTTP/1.1" 200 -
+2025-04-16 12:32:06,339 - INFO - Datei hochgeladen: WhatsApp Image 2025-01-30 at 10.02.31.jpeg
+2025-04-16 12:32:06,620 - INFO - Konvertierung erfolgreich: WhatsApp Image 2025-01-30 at 10.02.31.jpeg -> converted_d160ed87-499f-42d4-8af6-9570b21899d4.png
+2025-04-16 12:32:06,650 - INFO - 127.0.0.1 - - [16/Apr/2025 12:32:06] "POST /convert HTTP/1.1" 200 -
+2025-04-16 12:32:14,418 - INFO - Hauptseite aufgerufen
+2025-04-16 12:32:14,421 - INFO - 127.0.0.1 - - [16/Apr/2025 12:32:14] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 12:32:14,534 - INFO - 127.0.0.1 - - [16/Apr/2025 12:32:14] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:32:14,538 - INFO - 127.0.0.1 - - [16/Apr/2025 12:32:14] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 12:32:14,540 - INFO - 127.0.0.1 - - [16/Apr/2025 12:32:14] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 12:32:35,627 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 12:32:35,630 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_16c37ff2-6e86-49c7-820a-914a932f2db1.mp3
+2025-04-16 12:32:35,631 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_30748392-495f-4935-876d-e79b08c3c4e9.wav
+2025-04-16 12:32:35,631 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_d160ed87-499f-42d4-8af6-9570b21899d4.png

@@ -7,11 +7,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const result = document.getElementById('result');
     const downloadLink = document.getElementById('downloadLink');
     const convertTo = document.getElementById('convertTo');
+    const convertToAudio = document.getElementById('convertToAudio');
     const preview = document.getElementById('preview');
     const previewImage = document.getElementById('previewImage');
     const fileName = document.getElementById('fileName');
     const fileSize = document.getElementById('fileSize');
     const fileFormat = document.getElementById('fileFormat');
+    const formatBtns = document.querySelectorAll('.format-btn');
+
+    let currentFileType = 'image';
+
+    formatBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            formatBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentFileType = btn.dataset.type;
+            
+            if (currentFileType === 'image') {
+                convertTo.hidden = false;
+                convertToAudio.hidden = true;
+                fileInput.accept = '.jpg,.jpeg,.png,.webp,.gif,.tiff';
+            } else {
+                convertTo.hidden = true;
+                convertToAudio.hidden = false;
+                fileInput.accept = '.mp3,.wav';
+            }
+
+            preview.hidden = true;
+            result.hidden = true;
+            convertBtn.disabled = true;
+        });
+    });
 
     dropZone.addEventListener('dragover', (e) => {
         e.preventDefault();
@@ -47,21 +73,30 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleFiles(files) {
         if (files.length > 0) {
             const file = files[0];
-            if (file.type.startsWith('image/')) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    previewImage.src = e.target.result;
-                    fileName.textContent = file.name;
-                    fileSize.textContent = formatFileSize(file.size);
-                    fileFormat.textContent = file.type.split('/')[1].toUpperCase();
-                    preview.hidden = false;
-                    convertBtn.disabled = false;
-                    result.hidden = true;
-                };
-                reader.readAsDataURL(file);
+            const fileType = file.type.split('/')[0];
+            
+            if ((currentFileType === 'image' && fileType === 'image') ||
+                (currentFileType === 'audio' && fileType === 'audio')) {
+                
+                if (fileType === 'image') {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        previewImage.src = e.target.result;
+                        preview.hidden = false;
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    preview.hidden = true;
+                }
+
+                fileName.textContent = file.name;
+                fileSize.textContent = formatFileSize(file.size);
+                fileFormat.textContent = file.type.split('/')[1].toUpperCase();
+                convertBtn.disabled = false;
+                result.hidden = true;
                 convertBtn.onclick = () => convertFile(file);
             } else {
-                alert('Bitte wählen Sie ein Bild aus (JPG oder PNG)');
+                alert(`Bitte wählen Sie eine ${currentFileType === 'image' ? 'Bilddatei' : 'Audiodatei'} aus`);
             }
         }
     }
@@ -69,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function convertFile(file) {
         const formData = new FormData();
         formData.append('file', file);
-        formData.append('format', convertTo.value);
+        formData.append('format', currentFileType === 'image' ? convertTo.value : convertToAudio.value);
 
         progress.hidden = false;
         result.hidden = true;
@@ -87,11 +122,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const blob = await response.blob();
                 const url = URL.createObjectURL(blob);
                 downloadLink.href = url;
-                downloadLink.download = `converted.${convertTo.value}`;
+                downloadLink.download = `converted.${currentFileType === 'image' ? convertTo.value : convertToAudio.value}`;
                 progressBar.style.width = '100%';
                 result.hidden = false;
             } else {
-                throw new Error('Konvertierung fehlgeschlagen');
+                const errorText = await response.text();
+                throw new Error(errorText);
             }
         } catch (error) {
             alert('Fehler bei der Konvertierung: ' + error.message);

@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShiftFile - Bildkonverter</title>
+    <title>ShiftFile - Dateikonverter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>ShiftFile</h1>
+        <div class="format-selector">
+            <button class="format-btn active" data-type="image">Bilder</button>
+            <button class="format-btn" data-type="audio">Audio</button>
+        </div>
         <div class="upload-container" id="dropZone">
             <div class="upload-content">
                 <img src="upload-icon.svg" alt="Upload" id="uploadIcon">
                 <p>Dateien hierher ziehen oder klicken zum Auswählen</p>
-                <input type="file" id="fileInput" accept=".jpg,.jpeg,.png" hidden>
+                <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.webp,.gif,.tiff,.mp3,.wav" hidden>
             </div>
         </div>
         <div id="preview" class="preview-container" hidden>
@@ -28,9 +32,16 @@
             </div>
         </div>
         <div class="controls">
-            <select id="convertTo">
+            <select id="convertTo" class="image-formats">
                 <option value="png">Zu PNG konvertieren</option>
                 <option value="jpg">Zu JPG konvertieren</option>
+                <option value="webp">Zu WebP konvertieren</option>
+                <option value="gif">Zu GIF konvertieren</option>
+                <option value="tiff">Zu TIFF konvertieren</option>
+            </select>
+            <select id="convertToAudio" class="audio-formats" hidden>
+                <option value="mp3">Zu MP3 konvertieren</option>
+                <option value="wav">Zu WAV konvertieren</option>
             </select>
             <button id="convertBtn" disabled>Konvertieren</button>
         </div>
