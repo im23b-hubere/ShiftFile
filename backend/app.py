@@ -18,6 +18,11 @@ LOG_FILE = os.path.join(BASE_DIR, 'conversion.log')
 app = Flask(__name__, static_folder=FRONTEND_DIR, static_url_path='')
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+FORMAT_MAPPING = {
+    'JPG': 'JPEG',
+    'JPEG': 'JPEG',
+    'PNG': 'PNG'
+}
 
 logging.basicConfig(
     level=logging.INFO,
@@ -87,16 +92,16 @@ def convert_image():
         
         with Image.open(input_path) as img:
             target_format = request.form.get('format', 'png').upper()
-            if target_format not in ['PNG', 'JPG', 'JPEG']:
+            if target_format not in FORMAT_MAPPING:
                 logging.error(f'Ungültiges Zielformat: {target_format}')
                 return 'Ungültiges Zielformat', 400
 
-            if img.mode == 'RGBA' and target_format in ['JPG', 'JPEG']:
+            if img.mode == 'RGBA' and FORMAT_MAPPING[target_format] == 'JPEG':
                 img = img.convert('RGB')
 
             output_filename = f"converted_{uuid.uuid4()}.{target_format.lower()}"
             output_path = os.path.join(CONVERTED_DIR, output_filename)
-            img.save(output_path, format=target_format)
+            img.save(output_path, format=FORMAT_MAPPING[target_format])
             
             logging.info(f'Konvertierung erfolgreich: {file.filename} -> {output_filename}')
             

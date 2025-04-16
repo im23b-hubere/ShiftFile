@@ -153,3 +153,14 @@
 2025-04-16 11:25:39,989 - INFO - Server gestartet
 2025-04-16 11:25:40,001 - WARNING -  * Debugger is active!
 2025-04-16 11:25:40,006 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 11:31:35,194 - INFO - Hauptseite aufgerufen
+2025-04-16 11:31:35,231 - INFO - 127.0.0.1 - - [16/Apr/2025 11:31:35] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 11:31:35,275 - INFO - 127.0.0.1 - - [16/Apr/2025 11:31:35] "GET /style.css HTTP/1.1" 200 -
+2025-04-16 11:31:35,277 - INFO - 127.0.0.1 - - [16/Apr/2025 11:31:35] "GET /upload-icon.svg HTTP/1.1" 200 -
+2025-04-16 11:31:35,277 - INFO - 127.0.0.1 - - [16/Apr/2025 11:31:35] "GET /script.js HTTP/1.1" 200 -
+2025-04-16 11:31:43,455 - INFO - Datei hochgeladen: converted.png
+2025-04-16 11:31:43,644 - ERROR - Fehler bei der Konvertierung von converted.png: 'JPG'
+2025-04-16 11:31:43,646 - INFO - 127.0.0.1 - - [16/Apr/2025 11:31:43] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2025-04-16 11:32:41,291 - INFO - 127.0.0.1 - - [16/Apr/2025 11:32:41] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:32:43,339 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 11:32:43,342 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\uploads\e3f2cfcd-3fa4-4711-9f37-dfff4b578f6e_converted.png
