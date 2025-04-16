@@ -16,6 +16,17 @@
                 <input type="file" id="fileInput" accept=".jpg,.jpeg,.png" hidden>
             </div>
         </div>
+        <div id="preview" class="preview-container" hidden>
+            <h3>Vorschau</h3>
+            <div class="image-info">
+                <img id="previewImage" alt="Bildvorschau">
+                <div class="info-text">
+                    <p>Dateiname: <span id="fileName"></span></p>
+                    <p>Größe: <span id="fileSize"></span></p>
+                    <p>Format: <span id="fileFormat"></span></p>
+                </div>
+            </div>
+        </div>
         <div class="controls">
             <select id="convertTo">
                 <option value="png">Zu PNG konvertieren</option>

@@ -164,3 +164,34 @@
 2025-04-16 11:32:41,291 - INFO - 127.0.0.1 - - [16/Apr/2025 11:32:41] "[36mGET /style.css HTTP/1.1[0m" 304 -
 2025-04-16 11:32:43,339 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
 2025-04-16 11:32:43,342 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\uploads\e3f2cfcd-3fa4-4711-9f37-dfff4b578f6e_converted.png
+2025-04-16 11:32:43,496 - INFO -  * Restarting with stat
+2025-04-16 11:32:43,823 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 11:32:43,824 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 11:32:43,825 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 11:32:43,827 - INFO - Server gestartet
+2025-04-16 11:32:43,842 - WARNING -  * Debugger is active!
+2025-04-16 11:32:43,847 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 11:33:14,043 - INFO - Hauptseite aufgerufen
+2025-04-16 11:33:14,077 - INFO - 127.0.0.1 - - [16/Apr/2025 11:33:14] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 11:33:14,120 - INFO - 127.0.0.1 - - [16/Apr/2025 11:33:14] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:33:14,121 - INFO - 127.0.0.1 - - [16/Apr/2025 11:33:14] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 11:33:14,122 - INFO - 127.0.0.1 - - [16/Apr/2025 11:33:14] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 11:33:21,943 - INFO - Datei hochgeladen: converted.png
+2025-04-16 11:33:22,029 - INFO - Konvertierung erfolgreich: converted.png -> converted_d412d743-33b0-43a5-b10e-485b4e6554db.jpg
+2025-04-16 11:33:22,047 - INFO - 127.0.0.1 - - [16/Apr/2025 11:33:22] "POST /convert HTTP/1.1" 200 -
+2025-04-16 11:37:23,897 - INFO - Datei hochgeladen: converted.png
+2025-04-16 11:37:23,920 - INFO - Konvertierung erfolgreich: converted.png -> converted_b499286d-2c47-4fec-919e-0b402160bb6a.jpg
+2025-04-16 11:37:23,935 - INFO - 127.0.0.1 - - [16/Apr/2025 11:37:23] "POST /convert HTTP/1.1" 200 -
+2025-04-16 11:37:28,005 - INFO - Hauptseite aufgerufen
+2025-04-16 11:37:28,007 - INFO - 127.0.0.1 - - [16/Apr/2025 11:37:28] "GET / HTTP/1.1" 200 -
+2025-04-16 11:37:28,049 - INFO - 127.0.0.1 - - [16/Apr/2025 11:37:28] "GET /style.css HTTP/1.1" 200 -
+2025-04-16 11:37:28,052 - INFO - 127.0.0.1 - - [16/Apr/2025 11:37:28] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 11:37:28,055 - INFO - 127.0.0.1 - - [16/Apr/2025 11:37:28] "GET /script.js HTTP/1.1" 200 -
+2025-04-16 11:37:35,276 - INFO - Datei hochgeladen: converted.png
+2025-04-16 11:37:35,318 - INFO - Konvertierung erfolgreich: converted.png -> converted_a3720ec7-5c13-49de-8663-753dcf122231.jpg
+2025-04-16 11:37:35,326 - INFO - 127.0.0.1 - - [16/Apr/2025 11:37:35] "POST /convert HTTP/1.1" 200 -
+2025-04-16 11:37:41,725 - INFO - Hauptseite aufgerufen
+2025-04-16 11:37:41,727 - INFO - 127.0.0.1 - - [16/Apr/2025 11:37:41] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 11:37:41,756 - INFO - 127.0.0.1 - - [16/Apr/2025 11:37:41] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:37:41,763 - INFO - 127.0.0.1 - - [16/Apr/2025 11:37:41] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 11:37:41,765 - INFO - 127.0.0.1 - - [16/Apr/2025 11:37:41] "[36mGET /script.js HTTP/1.1[0m" 304 -
