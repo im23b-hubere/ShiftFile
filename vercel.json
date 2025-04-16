@@ -12,14 +12,16 @@
     ],
     "routes": [
         {
-            "src": "/(.*)",
+            "src": "/api/(.*)",
             "dest": "backend/app.py"
         },
         {
             "src": "/(.*)",
-            "dest": "/frontend/$1",
-            "continue": true
+            "dest": "backend/app.py"
         }
     ],
-    "installCommand": "pip install -r requirements.txt"
+    "installCommand": "pip install -r requirements.txt",
+    "env": {
+        "PYTHON_VERSION": "3.11"
+    }
 } 
