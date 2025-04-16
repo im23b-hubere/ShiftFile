@@ -15,22 +15,19 @@ import cloudconvert
 load_dotenv()
 
 # Configure CloudConvert
-if os.getenv('CLOUDCONVERT_API_KEY'):
+if not os.getenv('CLOUDCONVERT_API_KEY'):
+    logging.error("CLOUDCONVERT_API_KEY nicht gefunden!")
+else:
     cloudconvert.configure(api_key=os.getenv('CLOUDCONVERT_API_KEY'))
 
 # Verzeichnisse konfigurieren
-if os.getenv('VERCEL_ENV'):
-    # Auf Vercel nutzen wir /tmp für temporäre Dateien
-    BASE_DIR = '/tmp'
-    TEMP_DIR = '/tmp'
-else:
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    TEMP_DIR = os.path.join(BASE_DIR, 'temp')
+TEMP_DIR = '/tmp' if os.getenv('VERCEL_ENV') else os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'temp')
+FRONTEND_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'frontend')
 
 # Verzeichnis erstellen
 os.makedirs(TEMP_DIR, exist_ok=True)
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder=FRONTEND_DIR, static_url_path='')
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max-limit
 
 # Logging-Konfiguration
@@ -56,7 +53,25 @@ FORMAT_MAPPING = {
     'ico': 'ICO'
 }
 
-@app.route('/formats')
+@app.route('/')
+def index():
+    """Serve the frontend"""
+    try:
+        return send_from_directory(app.static_folder, 'index.html')
+    except Exception as e:
+        logging.error(f"Error serving index.html: {str(e)}")
+        return jsonify({'error': 'Frontend not found'}), 404
+
+@app.route('/<path:path>')
+def serve_static(path):
+    """Serve static files"""
+    try:
+        return send_from_directory(app.static_folder, path)
+    except Exception as e:
+        logging.error(f"Error serving static file {path}: {str(e)}")
+        return send_from_directory(app.static_folder, 'index.html')
+
+@app.route('/api/formats')
 def get_formats():
     """Get supported formats"""
     return jsonify({
@@ -64,9 +79,12 @@ def get_formats():
         'audio': list(ALLOWED_AUDIO_EXTENSIONS)
     })
 
-@app.route('/convert', methods=['POST'])
+@app.route('/api/convert', methods=['POST'])
 def convert_file():
     """Handle file conversion"""
+    if not os.getenv('CLOUDCONVERT_API_KEY'):
+        return jsonify({'error': 'CloudConvert API-Key nicht konfiguriert'}), 500
+
     try:
         if 'file' not in request.files:
             return jsonify({'error': 'Keine Datei gefunden'}), 400
@@ -111,7 +129,7 @@ def convert_file():
                     logging.info(f"Bild erfolgreich konvertiert: {temp_output}")
             
             elif is_audio_file(file.filename):
-                # Audio processing using CloudConvert
+                logging.info(f"Konvertiere Audio von {input_ext} nach {target_format}")
                 try:
                     job = cloudconvert.Job.create({
                         'tasks': {
@@ -126,7 +144,6 @@ def convert_file():
                                 'audio_bitrate': request.form.get('bitrate', '192'),
                                 'audio_normalize': request.form.get('normalize', 'false').lower() == 'true',
                                 'audio_channels': 1 if request.form.get('mono', 'false').lower() == 'true' else 2,
-                                'audio_frequency': request.form.get('frequency', '44100'),
                                 'volume': float(request.form.get('volume', 0)),
                                 'trim_start': float(request.form.get('fadeIn', 0)),
                                 'trim_end': float(request.form.get('fadeOut', 0))
@@ -138,20 +155,21 @@ def convert_file():
                         }
                     })
 
-                    # Upload the file
+                    logging.info("Uploading file to CloudConvert...")
                     upload_task = job['tasks']['import-file']
                     with open(temp_input, 'rb') as file:
                         cloudconvert.Task.upload(file=file, task=upload_task)
                     
-                    # Wait for the job to complete
+                    logging.info("Waiting for conversion...")
                     job = cloudconvert.Job.wait(id=job['id'])
                     export_task = job['tasks']['export-file']
                     
-                    # Download the converted file
+                    logging.info("Downloading converted file...")
                     cloudconvert.download(filename=temp_output, url=export_task['result']['files'][0]['url'])
+                    logging.info("Audio conversion completed successfully")
                     
                 except Exception as e:
-                    logging.error(f"Cloud conversion error: {str(e)}")
+                    logging.error(f"CloudConvert error: {str(e)}")
                     return jsonify({'error': f'Fehler bei der Cloud-Konvertierung: {str(e)}'}), 500
 
             # Send the converted file
