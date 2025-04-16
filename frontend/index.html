@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShiftFile - Bildkonverter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ShiftFile</h1>
+        <div class="upload-container" id="dropZone">
+            <div class="upload-content">
+                <img src="upload-icon.svg" alt="Upload" id="uploadIcon">
+                <p>Dateien hierher ziehen oder klicken zum Auswählen</p>
+                <input type="file" id="fileInput" accept=".jpg,.jpeg,.png" hidden>
+            </div>
+        </div>
+        <div class="controls">
+            <select id="convertTo">
+                <option value="png">Zu PNG konvertieren</option>
+                <option value="jpg">Zu JPG konvertieren</option>
+            </select>
+            <button id="convertBtn" disabled>Konvertieren</button>
+        </div>
+        <div id="progress" class="progress" hidden>
+            <div class="progress-bar"></div>
+        </div>
+        <div id="result" hidden>
+            <h3>Konvertierung abgeschlossen!</h3>
+            <a id="downloadLink" class="download-btn" download>Datei herunterladen</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,125 @@
+2025-04-16 11:04:03 - Temporäre Dateien wurden bereinigt
+2025-04-16 11:04:03 - Server gestartet
+2025-04-16 11:04:03 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-16 11:04:03 - [33mPress CTRL+C to quit[0m
+2025-04-16 11:04:03 -  * Restarting with stat
+2025-04-16 11:04:03 - Temporäre Dateien wurden bereinigt
+2025-04-16 11:04:03 - Server gestartet
+2025-04-16 11:04:03 -  * Debugger is active!
+2025-04-16 11:04:03 -  * Debugger PIN: 902-726-082
+2025-04-16 11:07:26 - Temporäre Dateien wurden bereinigt
+2025-04-16 11:07:26 - Server gestartet
+2025-04-16 11:07:26 -  * Debugger is active!
+2025-04-16 11:07:26 -  * Debugger PIN: 902-726-082
+2025-04-16 11:08:06 - Temporäre Dateien wurden bereinigt
+2025-04-16 11:08:06 - Server gestartet
+2025-04-16 11:08:06 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-16 11:08:06 - [33mPress CTRL+C to quit[0m
+2025-04-16 11:08:06 -  * Restarting with stat
+2025-04-16 11:08:06 - Temporäre Dateien wurden bereinigt
+2025-04-16 11:08:06 - Server gestartet
+2025-04-16 11:08:06 -  * Debugger is active!
+2025-04-16 11:08:06 -  * Debugger PIN: 902-726-082
+2025-04-16 11:09:50 - Temporäre Dateien wurden bereinigt
+2025-04-16 11:09:50 - Server gestartet
+2025-04-16 11:09:50 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-16 11:09:50 - [33mPress CTRL+C to quit[0m
+2025-04-16 11:09:50 -  * Restarting with stat
+2025-04-16 11:09:50 - Temporäre Dateien wurden bereinigt
+2025-04-16 11:09:50 - Server gestartet
+2025-04-16 11:09:50 -  * Debugger is active!
+2025-04-16 11:09:50 -  * Debugger PIN: 902-726-082
+2025-04-16 11:11:14 -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 11:11:14 -  * Restarting with stat
+2025-04-16 11:11:14,589 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 11:11:14,590 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 11:11:14,591 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 11:11:14,592 - INFO - Temporäre Dateien wurden bereinigt
+2025-04-16 11:11:14,592 - INFO - Server gestartet
+2025-04-16 11:11:14,603 - WARNING -  * Debugger is active!
+2025-04-16 11:11:14,609 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 11:11:29,319 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 11:11:29,320 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 11:11:29,320 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 11:11:29,322 - INFO - Temporäre Dateien wurden bereinigt
+2025-04-16 11:11:29,322 - INFO - Server gestartet
+2025-04-16 11:11:29,344 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-16 11:11:29,344 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-16 11:11:29,348 - INFO -  * Restarting with stat
+2025-04-16 11:11:29,627 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 11:11:29,627 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 11:11:29,627 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 11:11:29,628 - INFO - Temporäre Dateien wurden bereinigt
+2025-04-16 11:11:29,628 - INFO - Server gestartet
+2025-04-16 11:11:29,637 - WARNING -  * Debugger is active!
+2025-04-16 11:11:29,642 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 11:12:16,632 - INFO - Hauptseite aufgerufen
+2025-04-16 11:12:16,668 - INFO - 127.0.0.1 - - [16/Apr/2025 11:12:16] "GET / HTTP/1.1" 200 -
+2025-04-16 11:12:16,727 - INFO - 127.0.0.1 - - [16/Apr/2025 11:12:16] "GET /style.css HTTP/1.1" 200 -
+2025-04-16 11:12:16,728 - INFO - 127.0.0.1 - - [16/Apr/2025 11:12:16] "GET /upload-icon.svg HTTP/1.1" 200 -
+2025-04-16 11:12:16,728 - INFO - 127.0.0.1 - - [16/Apr/2025 11:12:16] "GET /script.js HTTP/1.1" 200 -
+2025-04-16 11:12:16,762 - INFO - 127.0.0.1 - - [16/Apr/2025 11:12:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-16 11:12:47,684 - INFO - Datei hochgeladen: QuandaleDingle.jpg
+2025-04-16 11:12:47,916 - INFO - Konvertierung erfolgreich: QuandaleDingle.jpg -> converted_e683f80a-9539-4d83-9a78-53b3a73dd433.png
+2025-04-16 11:12:47,993 - INFO - 127.0.0.1 - - [16/Apr/2025 11:12:47] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2025-04-16 11:14:32,277 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 11:14:32,356 - INFO -  * Restarting with stat
+2025-04-16 11:14:32,689 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 11:14:32,690 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 11:14:32,690 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 11:14:32,692 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_e683f80a-9539-4d83-9a78-53b3a73dd433.png
+2025-04-16 11:14:32,692 - INFO - Server gestartet
+2025-04-16 11:14:32,707 - WARNING -  * Debugger is active!
+2025-04-16 11:14:32,712 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 11:16:46,550 - INFO - Hauptseite aufgerufen
+2025-04-16 11:16:46,587 - INFO - 127.0.0.1 - - [16/Apr/2025 11:16:46] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 11:16:46,626 - INFO - 127.0.0.1 - - [16/Apr/2025 11:16:46] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 11:16:46,626 - INFO - 127.0.0.1 - - [16/Apr/2025 11:16:46] "GET /style.css HTTP/1.1" 200 -
+2025-04-16 11:16:46,626 - INFO - 127.0.0.1 - - [16/Apr/2025 11:16:46] "GET /upload-icon.svg HTTP/1.1" 200 -
+2025-04-16 11:16:47,320 - INFO - Hauptseite aufgerufen
+2025-04-16 11:16:47,321 - INFO - 127.0.0.1 - - [16/Apr/2025 11:16:47] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 11:16:47,342 - INFO - 127.0.0.1 - - [16/Apr/2025 11:16:47] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:16:47,345 - INFO - 127.0.0.1 - - [16/Apr/2025 11:16:47] "[36mGET /upload-icon.svg HTTP/1.1[0m" 304 -
+2025-04-16 11:16:47,345 - INFO - 127.0.0.1 - - [16/Apr/2025 11:16:47] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-04-16 11:16:55,090 - INFO - Datei hochgeladen: QuandaleDingle.jpg
+2025-04-16 11:16:55,257 - INFO - Konvertierung erfolgreich: QuandaleDingle.jpg -> converted_077d1bff-cae6-4e77-be21-62904ea1ecd2.png
+2025-04-16 11:16:55,274 - INFO - 127.0.0.1 - - [16/Apr/2025 11:16:55] "POST /convert HTTP/1.1" 200 -
+2025-04-16 11:17:24,562 - INFO - Datei hochgeladen: QuandaleDingle.jpg
+2025-04-16 11:17:24,834 - ERROR - Fehler bei der Konvertierung von QuandaleDingle.jpg: 'JPG'
+2025-04-16 11:17:24,836 - INFO - 127.0.0.1 - - [16/Apr/2025 11:17:24] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2025-04-16 11:17:39,501 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 11:17:39,503 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\uploads\f54615b5-95d6-4d68-a3e6-4565e2086f12_QuandaleDingle.jpg
+2025-04-16 11:17:39,504 - INFO - Gelöschte temporäre Datei: C:\Own_projects\Shiftfile\ShiftFile\converted\converted_077d1bff-cae6-4e77-be21-62904ea1ecd2.png
+2025-04-16 11:17:39,551 - INFO -  * Restarting with stat
+2025-04-16 11:17:39,873 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 11:17:39,874 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 11:17:39,874 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 11:17:39,875 - INFO - Server gestartet
+2025-04-16 11:17:39,888 - WARNING -  * Debugger is active!
+2025-04-16 11:17:39,894 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 11:20:33,448 - INFO -  * Detected change in 'C:\\Own_projects\\Shiftfile\\ShiftFile\\backend\\app.py', reloading
+2025-04-16 11:20:33,562 - INFO -  * Restarting with stat
+2025-04-16 11:20:33,867 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\frontend
+2025-04-16 11:20:33,869 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\uploads
+2025-04-16 11:20:33,869 - INFO - Verzeichnis existiert bereits: C:\Own_projects\Shiftfile\ShiftFile\converted
+2025-04-16 11:20:33,883 - INFO - Server gestartet
+2025-04-16 11:20:33,902 - WARNING -  * Debugger is active!
+2025-04-16 11:20:33,921 - INFO -  * Debugger PIN: 902-726-082
+2025-04-16 11:21:36,446 - INFO - Hauptseite aufgerufen
+2025-04-16 11:21:36,489 - INFO - 127.0.0.1 - - [16/Apr/2025 11:21:36] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-16 11:21:36,546 - INFO - 127.0.0.1 - - [16/Apr/2025 11:21:36] "GET /style.css HTTP/1.1" 200 -
+2025-04-16 11:21:36,548 - INFO - 127.0.0.1 - - [16/Apr/2025 11:21:36] "GET /upload-icon.svg HTTP/1.1" 200 -
+2025-04-16 11:21:36,549 - INFO - 127.0.0.1 - - [16/Apr/2025 11:21:36] "GET /script.js HTTP/1.1" 200 -
+2025-04-16 11:21:40,241 - INFO - Datei hochgeladen: QuandaleDingle.jpg
+2025-04-16 11:21:40,301 - INFO - Konvertierung erfolgreich: QuandaleDingle.jpg -> converted_2664fa97-6dab-4731-993f-0502faf9676d.png
+2025-04-16 11:21:40,316 - INFO - 127.0.0.1 - - [16/Apr/2025 11:21:40] "POST /convert HTTP/1.1" 200 -
+2025-04-16 11:21:59,970 - INFO - Datei hochgeladen: converted.png
+2025-04-16 11:22:00,036 - ERROR - Fehler bei der Konvertierung von converted.png: 'JPG'
+2025-04-16 11:22:00,037 - INFO - 127.0.0.1 - - [16/Apr/2025 11:22:00] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2025-04-16 11:22:07,514 - INFO - Datei hochgeladen: converted.png
+2025-04-16 11:22:07,535 - ERROR - Fehler bei der Konvertierung von converted.png: 'JPG'
+2025-04-16 11:22:07,536 - INFO - 127.0.0.1 - - [16/Apr/2025 11:22:07] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
