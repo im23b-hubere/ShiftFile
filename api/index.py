@@ -10,17 +10,13 @@ import tempfile
 
 app = Flask(__name__)
 
-# Konfiguration
-UPLOAD_FOLDER = '/tmp/uploads'
-CONVERTED_FOLDER = '/tmp/converted'
-TEMP_FOLDER = '/tmp/temp'
+# Konfiguration für Vercel
+UPLOAD_FOLDER = '/tmp'  # Vercel erlaubt nur /tmp für Schreibzugriffe
+CONVERTED_FOLDER = '/tmp'
+TEMP_FOLDER = '/tmp'
 MAX_CONTENT_LENGTH = 50 * 1024 * 1024  # 50MB
 
-# Erstelle temporäre Verzeichnisse
-for folder in [UPLOAD_FOLDER, CONVERTED_FOLDER, TEMP_FOLDER]:
-    os.makedirs(folder, exist_ok=True)
-
-# Logging-Konfiguration
+# Logging-Konfiguration für Vercel
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
@@ -89,7 +85,7 @@ def convert_file(file, target_format):
     
     input_ext = filename.rsplit('.', 1)[1].lower()
     
-    # Generiere eindeutige Dateinamen
+    # Generiere eindeutige Dateinamen mit temporärem Verzeichnis
     unique_id = str(uuid.uuid4())
     temp_input_path = os.path.join(TEMP_FOLDER, f"input_{unique_id}.{input_ext}")
     output_filename = f"output_{unique_id}.{target_format.lower()}"
@@ -98,16 +94,19 @@ def convert_file(file, target_format):
     try:
         # Speichere Upload
         file.save(temp_input_path)
+        logger.info(f"Datei gespeichert: {temp_input_path}")
         
         # Prüfe Dateityp
         if input_ext in ALLOWED_IMAGE_EXTENSIONS and target_format.lower() in ALLOWED_IMAGE_EXTENSIONS:
             # Bildkonvertierung
+            logger.info(f"Starte Bildkonvertierung: {input_ext} -> {target_format}")
             if not optimize_image(temp_input_path, output_path, FORMAT_MAPPING[target_format.lower()]):
                 return jsonify({'error': 'Fehler bei der Bildkonvertierung'}), 500
         
         elif input_ext in ALLOWED_AUDIO_EXTENSIONS and target_format.lower() in ALLOWED_AUDIO_EXTENSIONS:
             # Audio-Konvertierung
             try:
+                logger.info(f"Starte Audiokonvertierung: {input_ext} -> {target_format}")
                 audio = AudioSegment.from_file(temp_input_path, format=input_ext)
                 audio.export(output_path, format=target_format.lower())
             except Exception as e:
@@ -117,6 +116,7 @@ def convert_file(file, target_format):
             return jsonify({'error': 'Nicht unterstütztes Dateiformat'}), 400
         
         # Sende konvertierte Datei
+        logger.info(f"Sende konvertierte Datei: {output_path}")
         return send_file(output_path, as_attachment=True, download_name=output_filename)
     
     except Exception as e:
@@ -244,4 +244,27 @@ def process():
 
 @app.route('/api/health', methods=['GET'])
 def health_check():
-    return jsonify({'status': 'healthy'}), 200 
+    try:
+        # Überprüfe Verzeichniszugriffe
+        test_file = os.path.join(TEMP_FOLDER, 'test.txt')
+        with open(test_file, 'w') as f:
+            f.write('test')
+        os.remove(test_file)
+        
+        # Überprüfe FFmpeg
+        if not os.path.exists('/tmp/ffmpeg/ffmpeg'):
+            return jsonify({
+                'status': 'error',
+                'message': 'FFmpeg nicht gefunden'
+            }), 500
+        
+        return jsonify({
+            'status': 'healthy',
+            'temp_dir': TEMP_FOLDER,
+            'ffmpeg_path': '/tmp/ffmpeg/ffmpeg'
+        }), 200
+    except Exception as e:
+        return jsonify({
+            'status': 'error',
+            'message': str(e)
+        }), 500 
