@@ -28,7 +28,7 @@ FRONTEND_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__fi
 os.makedirs(TEMP_DIR, exist_ok=True)
 
 app = Flask(__name__, static_folder=FRONTEND_DIR, static_url_path='')
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max-limit
+app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024  # 50MB max-limit
 
 # Logging-Konfiguration
 logging.basicConfig(
@@ -51,6 +51,16 @@ FORMAT_MAPPING = {
     'gif': 'GIF',
     'bmp': 'BMP',
     'ico': 'ICO'
+}
+
+# Qualitätseinstellungen für verschiedene Formate
+IMAGE_QUALITY_SETTINGS = {
+    'JPEG': {'quality': 92, 'optimize': True},
+    'PNG': {'optimize': True},
+    'WEBP': {'quality': 90},
+    'GIF': {'optimize': True},
+    'BMP': {},
+    'ICO': {'sizes': [(16, 16), (32, 32), (48, 48), (64, 64)]}
 }
 
 @app.route('/')
@@ -96,6 +106,13 @@ def convert_file():
         if not allowed_file(file.filename):
             return jsonify({'error': 'Nicht unterstütztes Dateiformat'}), 400
 
+        target_format = request.form.get('format', '').lower()
+        if not target_format:
+            return jsonify({'error': 'Zielformat nicht angegeben'}), 400
+
+        if target_format not in ALLOWED_EXTENSIONS:
+            return jsonify({'error': f'Nicht unterstütztes Zielformat: {target_format}'}), 400
+
         # Log request details
         logging.info(f"Konvertierungsanfrage: {file.filename}")
         logging.info(f"Parameter: {request.form}")
@@ -105,11 +122,13 @@ def convert_file():
         temp_input = os.path.join(TEMP_DIR, f"input_{uuid.uuid4()}{input_ext}")
         file.save(temp_input)
         
-        target_format = request.form.get('format', 'png').lower()
         temp_output = os.path.join(TEMP_DIR, f"output_{uuid.uuid4()}.{target_format}")
 
         try:
             if is_image_file(file.filename):
+                if not target_format in ALLOWED_IMAGE_EXTENSIONS:
+                    return jsonify({'error': f'Ungültiges Bildformat: {target_format}'}), 400
+
                 logging.info(f"Konvertiere Bild von {input_ext} nach {target_format}")
                 
                 # Öffne das Bild und konvertiere es
@@ -124,11 +143,18 @@ def convert_file():
                         img = background
                     
                     # Speichere das konvertierte Bild
-                    pillow_format = FORMAT_MAPPING.get(target_format, target_format.upper())
-                    img.save(temp_output, format=pillow_format)
+                    pillow_format = FORMAT_MAPPING.get(target_format)
+                    if not pillow_format:
+                        return jsonify({'error': f'Nicht unterstütztes Bildformat: {target_format}'}), 400
+                    
+                    quality_settings = IMAGE_QUALITY_SETTINGS.get(pillow_format, {})
+                    img.save(temp_output, format=pillow_format, **quality_settings)
                     logging.info(f"Bild erfolgreich konvertiert: {temp_output}")
             
             elif is_audio_file(file.filename):
+                if not target_format in ALLOWED_AUDIO_EXTENSIONS:
+                    return jsonify({'error': f'Ungültiges Audioformat: {target_format}'}), 400
+
                 logging.info(f"Konvertiere Audio von {input_ext} nach {target_format}")
                 try:
                     job = cloudconvert.Job.create({
