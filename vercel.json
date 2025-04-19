@@ -2,21 +2,26 @@
     "version": 2,
     "builds": [
         {
-            "src": "backend/app.py",
+            "src": "api/**/*.py",
             "use": "@vercel/python"
+        },
+        {
+            "src": "frontend/**",
+            "use": "@vercel/static"
         }
     ],
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "backend/app.py"
+            "dest": "api/$1"
         },
         {
             "src": "/(.*)",
-            "dest": "backend/app.py"
+            "dest": "frontend/$1"
         }
     ],
     "env": {
-        "PYTHON_VERSION": "3.11"
+        "PYTHON_VERSION": "3.11",
+        "FFMPEG_BINARY": "/tmp/ffmpeg"
     }
 } 
