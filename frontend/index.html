@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kostenloser Online-Dateikonverter für Bilder und Audio. Konvertieren Sie JPG, PNG, WEBP, GIF, MP3, WAV und mehr. Einfach zu bedienen, keine Installation erforderlich.">
-    <meta name="keywords" content="Dateikonverter, Bildkonverter, Audiokonverter, Online-Konverter, JPG, PNG, WEBP, GIF, MP3, WAV, kostenlos">
+    <meta name="description" content="Kostenloser Online-Bildkonverter. Konvertieren Sie JPG, PNG, WEBP, GIF und mehr. Einfach zu bedienen, keine Installation erforderlich.">
+    <meta name="keywords" content="Bildkonverter, Online-Konverter, JPG, PNG, WEBP, GIF, kostenlos">
     <meta name="author" content="ShiftFile">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="ShiftFile - Kostenloser Online-Dateikonverter">
-    <meta property="og:description" content="Konvertieren Sie Bilder und Audiodateien kostenlos online. Unterstützt JPG, PNG, WEBP, GIF, MP3, WAV und mehr.">
+    <meta property="og:title" content="ShiftFile - Kostenloser Online-Bildkonverter">
+    <meta property="og:description" content="Konvertieren Sie Bilder kostenlos online. Unterstützt JPG, PNG, WEBP, GIF und mehr.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shiftfile.vercel.app">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
     
-    <title>ShiftFile - Kostenloser Online-Dateikonverter für Bilder und Audio</title>
+    <title>ShiftFile - Kostenloser Online-Bildkonverter</title>
     <link rel="stylesheet" href="style.css">
     
     <!-- Structured Data für Google -->
@@ -26,7 +26,7 @@
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "ShiftFile",
-        "description": "Kostenloser Online-Dateikonverter für Bilder und Audiodateien",
+        "description": "Kostenloser Online-Bildkonverter",
         "url": "https://shiftfile.vercel.app",
         "applicationCategory": "Multimedia",
         "operatingSystem": "All",
@@ -39,22 +39,18 @@
 </head>
 <body>
     <div class="container">
-        <h1>ShiftFile - Dateikonverter</h1>
+        <h1>ShiftFile - Bildkonverter</h1>
         
-        <div class="format-selector">
-            <button class="format-btn active" data-type="image">Bild konvertieren</button>
-            <button class="format-btn" data-type="audio">Audio konvertieren</button>
-        </div>
-
         <div id="dropZone" class="upload-container">
             <div class="upload-content">
                 <svg id="uploadIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
                 </svg>
-                <p>Dateien hierher ziehen oder klicken zum Auswählen</p>
+                <p>Bilder hierher ziehen oder klicken zum Auswählen</p>
+                <p class="file-info">Max. 10MB - JPG, PNG, WEBP, GIF, TIFF, BMP, ICO</p>
             </div>
         </div>
-        <input type="file" id="fileInput" hidden>
+        <input type="file" id="fileInput" hidden accept="image/*">
 
         <select id="convertTo" class="format-select">
             <option value="jpg">JPG</option>
@@ -64,15 +60,6 @@
             <option value="tiff">TIFF</option>
             <option value="bmp">BMP</option>
             <option value="ico">ICO</option>
-        </select>
-
-        <select id="convertToAudio" class="format-select" hidden>
-            <option value="mp3">MP3</option>
-            <option value="wav">WAV</option>
-            <option value="ogg">OGG</option>
-            <option value="flac">FLAC</option>
-            <option value="m4a">M4A</option>
-            <option value="aac">AAC</option>
         </select>
 
         <div id="preview" class="preview-container" hidden>
@@ -93,6 +80,7 @@
             <div class="progress">
                 <div class="progress-bar"></div>
             </div>
+            <p>Konvertierung läuft...</p>
         </div>
 
         <div id="result" hidden>
@@ -102,7 +90,7 @@
     </div>
 
     <footer>
-        <p>© 2024 ShiftFile - Kostenloser Online-Dateikonverter</p>
+        <p>© 2024 ShiftFile - Kostenloser Online-Bildkonverter</p>
         <nav>
             <a href="/datenschutz">Datenschutz</a>
             <a href="/impressum">Impressum</a>

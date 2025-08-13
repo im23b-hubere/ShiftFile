@@ -5,7 +5,7 @@
             "src": "api/index.py",
             "use": "@vercel/python",
             "config": {
-                "maxLambdaSize": "50mb"
+                "maxLambdaSize": "15mb"
             }
         },
         {
@@ -24,13 +24,12 @@
         }
     ],
     "env": {
-        "PYTHON_VERSION": "3.11",
-        "FFMPEG_BINARY": "/tmp/ffmpeg"
+        "PYTHON_VERSION": "3.11"
     },
     "functions": {
         "api/index.py": {
             "memory": 1024,
-            "maxDuration": 60
+            "maxDuration": 30
         }
     }
 } 
